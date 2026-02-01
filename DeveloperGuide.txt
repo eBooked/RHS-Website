@@ -1,0 +1,30 @@
+RHS Robotics Website Development Guide:
+
+Hello fellow developer! 
+This is the original developer guide for the RHS Robotics Website Code! Glad
+you are here!
+
+First off, you are coding using ASTRO and TAILWIND. Previously, the Website
+was based off of PUG and BOOTSTRAP, but was updated using these newer languages.
+
+- What is Astro?
+Astro is essentially very good at making simple websites that don't need backend
+or servers to run. Perfect for us, but if you're interested in making systems that
+involve backend, such as a login system, saving any data, etc, it is not
+recommended. 
+In addition, Astro has plenty of developer features and storage of values that
+makes website create EASY.
+
+- What is Tailwind?
+Tailwind is modern bootstrap. But if you're asking what bootstrap is, don't worry,
+I was there too. Bootstrap may seem complicated, but it simplifies CSS so that you
+don't need to write each CSS line or any at all, instead puting the CSS inside
+HTML. This makes code significantly easier to read.
+
+- What do you need?
+As an extension, are you will need is Astro. From there, you will need Node to run
+Astro and Tailwind. It may seem complicated, but it really isn't. Please, if you're
+struggling, you can message me (eBooked) on discord or USE AI. (SERIOUSLY USE AI,
+it is very helpful for everything).
+
+//-Blake (eBooked)

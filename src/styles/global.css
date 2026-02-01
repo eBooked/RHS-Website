@@ -1,0 +1,20 @@
+/* Imports Tailwind */
+@import "tailwindcss";
+
+/* UNIVERSAL VARIABLES */
+
+/* Keep in mind that 1rem = 4 tailwind units */
+:root {
+  /* Fonts */
+
+
+  /* Buttons */
+    --button-padding-x: .5rem;
+    --button-padding-y: 1rem;
+    --button-width: 9rem;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}

@@ -1,0 +1,45 @@
+---
+interface Props {
+  label: string;
+  id: string;
+  items: { href: string; label: string }[];
+}
+
+const { label, id, items } = Astro.props as Props;
+---
+
+<div class="relative group inline-block ">
+
+    <!-- Button -->
+    <button 
+      id= {`${id}-btn`}
+      data-dropdown-id={id}
+      class="w-[var(--button-width)] px-[var(--button-padding-x)] py-[var(--button-padding-y)] text-black rounded-md hover:bg-gray-100 
+        transition-colors duration-150 flex items-center justify-center font-mono"
+    >
+        <!-- Text set to label -->
+        {label}       
+        <img src="/assets/DownArrow.png" alt="Arrow" class="h-3 w-auto px-2 inline-block transition-transform duration-400"
+        id={`${id}-arrow`}
+         />
+    </button>
+
+    
+    <!-- Hidden menu -->
+    <div 
+      id= {`${id}-menu`}
+      class=
+        "absolute left-0 mt-2 w-50 shadow bg-white rounded-md scale-95 opacity-0 pointer-events-none transition-all duration-200 
+         origin-top p-2 font-sans"
+    >
+
+        <!-- Repeats for each item, creates its own tab -->
+        {items.map(item => (
+            <a href={item.href} class="flex items-center pr-2 py-0 hover:bg-gray-100 font-saira">
+              <span class="w-0.5 h-10 bg-yellow-400 mr-2"></span>
+
+              {item.label}
+            </a>
+          ))}
+    </div>
+</div>

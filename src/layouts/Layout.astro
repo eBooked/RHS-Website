@@ -1,0 +1,77 @@
+---
+/* Imports Tailwind */
+import "../styles/global.css";
+
+/* Imports components */
+import DropDownButton from '../components/DropDownButton.astro';
+import Button from '../components/Button.astro';
+
+---
+<html lang="en">
+  <header>
+    
+  </header>
+
+  <body>
+
+    <!-- Style Bar -->
+    <hr class=" shadow p-1">
+
+    <!-- Navbar -->
+    <nav class="px-[15%] bg-gray-50 shadow p-2 flex items-center">
+
+      <!-- Logo -->
+      <img src="/assets/logo.png" alt="Iron Riders Logo" class="h-18 w-auto pr-2" />
+      <div class="font-mono bg-yellow-400 text-3xl p-3 w-52">IRON RIDERS</div>
+
+        <!-- Navigration links -->
+      <div class="flex item-center justify-center px-10">   
+        <!-- Home Button -->
+          <Button 
+            label="Home"
+            href="/"
+          />
+
+          <!-- About Us Dropdown -->
+          <DropDownButton
+            label="About Us"
+            id="AboutUs"
+            items={[
+              { href: "/OurTeam", label: "Our Team" },
+              { href: "/Gallery", label: "Gallery" },
+              { href: "/Mentors", label: "Mentors" }
+            ]}
+            />
+            <!-- Resources Dropdown -->
+            <DropDownButton
+            label="Resources"
+            id="Resources"
+              items={[
+              { href: "/chat", label: "Digital Resources" },
+              { href: "https://opencollective.com/astrodotbuild", label: "Calander" },
+              { href: "https://shop.astro.build/", label: "Sponsors" }
+              ]}
+            />
+
+            <!-- Community Dropdown -->
+            <DropDownButton
+            label="Community"
+            id="Community"
+              items={[
+              { href: "/chat", label: "Outreach" },
+              { href: "https://opencollective.com/astrodotbuild", label: "Join" },
+              { href: "https://shop.astro.build/", label: "Discord" }
+              ]}
+            />
+        </div>
+
+      </div>
+    </nav>
+
+    <main>
+      <slot />
+    </main>
+
+  </body>
+  <script src="../scripts/dropdown.js"></script>
+</html>
