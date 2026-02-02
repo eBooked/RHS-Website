@@ -28,7 +28,7 @@ import Button from '../components/Button.astro';
         </div>
 
         <!-- Desktop Navigation links -->
-        <div class="hidden md:flex items-center space-x-4">
+        <div class="hidden lg:flex items-center space-x-4">
         <!-- Home Button -->
           <Button 
             label="Home"
@@ -69,25 +69,38 @@ import Button from '../components/Button.astro';
         </div>
 
         <!-- Mobile menu button -->
-        <div class="md:hidden flex items-center">
+        <div class="lg:hidden flex items-center gray-50">
           <button id="mobile-menu-button" class="text-gray-500 focus:outline-none">
+
+            <!-- The concept of this is that essentially you get a shape. You could also use html entities -->
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
+            
           </button>
         </div>
       </div>
+    </nav>
 
-      <!-- Mobile menu content -->
-      <div id="mobile-menu" class="md:hidden hidden bg-gray-50 p-4">
-        <div class="flex justify-end">
-          <button id="close-mobile-menu-button" class="text-gray-500 focus:outline-none">
+    <!-- Secondary Navbar for smaller devices -->
+    <nav id="mobile-menu" class="lg:hidden hidden bg-gray-100 shadow p-1">
+
+      <!-- Mobile menu content wrapper-->
+      <div class="lg:hidden">
+
+        <!-- Close Menu Button -->
+        <div class="flex justify-end px-2">
+          <button id="close-mobile-menu-button" class="text-gray-500 focus:outline-none hover:-gray-800">
+
+            <!-- Again, don't worry about this, it's just for a symbol -->
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
           </button>
         </div>
-        <div class="flex flex-col space-y-2 mt-4">   
+
+        <!-- Menu Content -->
+        <div class="flex space-y-2 mt-4">   
         
         </div>
       </div>
