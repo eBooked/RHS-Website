@@ -22,13 +22,13 @@ import Button from '../components/Button.astro';
       <div class="container mx-auto px-4 flex items-center justify-between">
 
         <!-- Logo -->
-        <div class="flex items-center space-x-2">
-          <img src="/assets/logo.png" alt="Iron Riders Logo" class="h-12 w-auto" />
+        <a href="/" class="flex items-center space-x-2">
+          <img src="/assets/logo.png" alt="Iron Riders Logo" class="h-15 w-auto" />
           <div class="font-mono bg-yellow-400 text-3xl p-2">IRON RIDERS</div>
-        </div>
+        </a>
 
         <!-- Desktop Navigation links -->
-        <div class="hidden lg:flex items-center space-x-4">
+        <div class="hidden lg:flex items-center space-x-2">
         <!-- Home Button -->
           <Button 
             label="Home"
@@ -40,9 +40,9 @@ import Button from '../components/Button.astro';
             label="About Us"
             id="AboutUs"
             items={[
-              { href: "/OurTeam", label: "Our Team" },
-              { href: "/Gallery", label: "Gallery" },
-              { href: "/Mentors", label: "Mentors" }
+              { href: "/ourteam", label: "Our Team" },
+              { href: "/gallery", label: "Gallery" },
+              { href: "/mentors", label: "Mentors" }
             ]}
             />
             <!-- Resources Dropdown -->
@@ -52,7 +52,8 @@ import Button from '../components/Button.astro';
               items={[
               { href: "/chat", label: "Digital Resources" },
               { href: "https://opencollective.com/astrodotbuild", label: "Calander" },
-              { href: "https://shop.astro.build/", label: "Sponsors" }
+              { href: "/sponsors", label: "Sponsors" },
+              { href: "/daiwdohas", label: "Woops " }
               ]}
             />
 
@@ -96,6 +97,7 @@ import Button from '../components/Button.astro';
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
+
           </button>
         </div>
 
