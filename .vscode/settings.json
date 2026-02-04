@@ -1,0 +1,6 @@
+{
+    "scm.diffDecorations": "none",
+    "scm.diffDecorationsGutterAction": "none",
+    "scm.diffDecorationsGutterVisibility": "hover",
+    "editor.cursorStyle": "line"
+}

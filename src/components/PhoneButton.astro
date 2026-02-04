@@ -1,0 +1,29 @@
+<!-- This only exists due to styling reasons; the code behind each button is the same. -->
+---
+
+import type { string } from 'astro:schema';
+
+interface Props {
+  label: string;
+  href?: string;
+}
+
+const { label, href } = Astro.props as Props;
+---
+
+{href ? (
+    <a
+      href={href}
+      class=
+        "w-[var(--button-width)] px-[var(--button-padding-x)] py-[var(--button-padding-y)] text-black rounded-md hover:bg-gray-200 
+        transition-colors duration-150 flex items-center justify-center font-mono"
+    >
+      {label}
+    </a>
+  ) : (
+    <button
+      class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors duration-150"
+    >
+      {label}
+    </button>
+  )}
