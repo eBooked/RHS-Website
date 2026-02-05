@@ -29,7 +29,6 @@ document.body.addEventListener('click', (e) => {
         menu.classList.toggle('opacity-100');
         menu.classList.toggle('scale-100');
         menu.classList.toggle('pointer-events-none');
-        console.log("its work!");
   
         const arrow = btn.querySelector('[id$="-phone-arrow"]');
         if (arrow) {
