@@ -9,18 +9,18 @@ import PhoneDropDownButton from "../components/PhoneDropDownButton.astro";
 import PhoneButton from "../components/PhoneButton.astro";
 
 ---
-<html lang="en">
+<html lang="en" class="dark">
   <header>
     
   </header>
 
   <body>
 
-    <!-- Style Bar -->
+    <!-- Style Bar, not in use -->
     <hr class=" shadow p-1">
 
     <!-- Navbar -->
-    <nav class="bg-gray-50 shadow p-2">
+    <nav class="bg-white dark:bg-gray-900 shadow p-2">
       <div class="container mx-auto px-4 flex items-center justify-between">
 
         <!-- Logo -->
@@ -71,6 +71,11 @@ import PhoneButton from "../components/PhoneButton.astro";
             />
         </div>
 
+        <!-- Darkmode Button -->
+         <div id="darkmode-button" class="bg-red-100 w-10 h-10">
+
+         </div>
+
         <!-- Mobile menu button -->
         <div class="lg:hidden flex items-center gray-50">
           <button id="mobile-menu-button" class="text-gray-500 focus:outline-none hover:text-gray-800 transition-colors duration-200">
@@ -82,7 +87,6 @@ import PhoneButton from "../components/PhoneButton.astro";
             
           </button>
         </div>
-
       </div>
     </nav>
     <!-- End of navbar -->
@@ -206,4 +210,5 @@ import PhoneButton from "../components/PhoneButton.astro";
   <script src="../scripts/dropdown.js"></script>
   <script src="../scripts/phoneDropdown.js"></script>
   <script src="../scripts/mobileMenu.js"></script>
+  <script src="../scripts/darkmode.js"></script>
 </html>
