@@ -1,10 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const darkmodeMenuButton = document.getElementById('darkmode-button');
+  const darkmodeButton = document.getElementById('darkmode-button');
+  if (!darkmodeButton) return;
 
-    darkmodeMenuButton.addEventListener('click', () => {
+  function setTheme(isDark) {
+    if (isDark) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  }
 
-        console.log(document.documentElement.classList.contains("dark"));
-        document.body.classList.toggle("dark")
-        console.log("Darkmode Toggled");
-    });
+  darkmodeButton.addEventListener('click', () => {
+    const isDark = !document.documentElement.classList.contains('dark');
+    setTheme(isDark);
+  });
 });
