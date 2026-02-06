@@ -30,17 +30,17 @@ import PhoneButton from "../components/PhoneButton.astro";
     <hr class="shadow p-1 border-gray-200 dark:border-gray-700">
 
     <!-- Navbar -->
-    <nav class="bg-white dark:bg-gray-900 shadow p-2">
+    <nav class="bg-gray-500 dark:bg-gray-100 shadow p-2">
       <div class="container mx-auto px-4 flex items-center justify-between">
 
         <!-- Logo -->
         <a href="/" class="flex items-center space-x-2">
           <img src="/assets/logo.png" alt="Iron Riders Logo" class="h-15 w-auto" />
-          <div class="font-mono bg-yellow-400 text-3xl p-2">IRON RIDERS</div>
+          <div class="font-mono bg-yellow-400 dark:bg-yellow-100 text-3xl p-2">IRON RIDERS</div>
         </a>
 
         <!-- Desktop Navigation links -->
-        <div class="hidden lg:flex items-center space-x-2">
+        <div class="desktop-nav-links hidden lg:flex items-center space-x-2">
         <!-- Home Button -->
           <Button 
             label="Home"
@@ -108,7 +108,7 @@ import PhoneButton from "../components/PhoneButton.astro";
     <nav id="mobile-menu" class="lg:hidden hidden bg-gray-100 dark:bg-gray-800 shadow p-1">
 
       <!-- Mobile menu content wrapper-->
-      <div class="lg:hidden flex">
+      <div class="mobile-nav-links lg:hidden flex">
 
         <!-- Menu Content -->
         
