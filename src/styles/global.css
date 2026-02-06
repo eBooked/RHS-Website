@@ -1,6 +1,9 @@
 /* Imports Tailwind */
 @import "tailwindcss";
 
+/* Tailwind v4: Use class-based darkmode (add "dark" to <html>) instead of prefers-color-scheme */
+@custom-variant dark (&& :where(.dark, .dark *));
+
 /* UNIVERSAL VARIABLES */
 
 /* Keep in mind that 1rem = 4 tailwind units */
@@ -12,6 +15,11 @@
     --button-padding-x: .5rem;
     --button-padding-y: 1rem;
     --button-width: 9rem;
+}
+
+html {
+  /* Ensures dark mode applies to entire viewport */
+  color-scheme: light dark;
 }
 
 html, body {
