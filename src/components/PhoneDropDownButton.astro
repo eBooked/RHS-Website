@@ -15,11 +15,11 @@ const { label, id, items } = Astro.props as Props;
       id= {`${id}-phone-btn`}
       data-dropdown-id={id}
       class="w-[var(--button-width)] px-[var(--button-padding-x)] py-[var(--button-padding-y)] text-black dark:text-gray-100 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 
-        transition-colors duration-150 flex items-center justify-center font-mono"
+        transition-colors duration-150 flex items-center justify-center font-mono md:pointer-events-auto sm:pointer-events-auto"
     >
         <!-- Text set to label -->
         {label}       
-        <img src="/assets/DownArrow.png" alt="Arrow" class="h-3 w-auto px-2 inline-block transition-transform duration-300"
+        <img src="/assets/DownArrow.png" alt="Arrow" class="filter invert-0 dark:invert h-3 w-auto px-2 inline-block transition-transform duration-300"
         id={`${id}-phone-arrow`}
          />
     </button>
@@ -29,13 +29,14 @@ const { label, id, items } = Astro.props as Props;
     <div 
       id= {`${id}-phone-menu`}
       class=
-        "absolute left-45 top-25 w-50 shadow bg-gray-100 dark:bg-gray-800 rounded-md scale-95 opacity-0 pointer-events-none transition-all duration-200 
-         origin-top p-2 font-sans"
+        "absolute left-45 top-25 w-50 shadow-2xl bg-gray-100 dark:bg-gray-800 rounded-md scale-95 opacity-0 pointer-events-none transition-all duration-200 
+         origin-top p-2 font-sans md:pointer-events-auto sm:pointer-events-auto"
     >
 
         <!-- Repeats for each item, creates its own tab -->
         {items.map(item => (
             <a href={item.href} class="flex items-center pr-2 py-0 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-900 dark:text-gray-100 transition-colors duration-150">
+              <!-- Yellow Bar -->
               <span class="w-0.5 h-10 bg-yellow-400 mr-2"></span>
 
               {item.label}

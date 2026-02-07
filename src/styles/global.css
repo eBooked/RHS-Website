@@ -1,14 +1,21 @@
 /* Imports Tailwind */
 @import "tailwindcss";
 
-/* Tailwind v4: Use class-based darkmode (add "dark" to <html>) instead of prefers-color-scheme */
+/* Tailwind v4: Use class-based darkmode */
 @custom-variant dark (&:where(.dark, .dark *));
+
+/* Custom colors */
+@theme {
+  /* RHS Green and yellow */
+  --color-dark-green: #033602;
+  --color-golden-yellow: #facc15;
+
+}
 
 /* UNIVERSAL VARIABLES */
 
 /* Keep in mind that 1rem = 4 tailwind units */
 :root {
-  /* Fonts */
 
 
   /* Buttons */

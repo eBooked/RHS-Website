@@ -1,3 +1,5 @@
+// This code is literally exactly the same as regular dropdown with a change of IDs and some styling
+
 document.body.addEventListener('click', (e) => {
     const target = e.target;
     const btn = target.closest('[data-dropdown-id]');
