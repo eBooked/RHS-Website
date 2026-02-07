@@ -39,12 +39,8 @@ import PhoneButton from "../components/PhoneButton.astro";
   </head>
 
   <body class="bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 transition-colors duration-200">
-
-    <!-- Style Bar, not in use -->
-    <hr class="shadow p-1 border-gray-200 dark:border-gray-700">
-
     <!-- Navbar -->
-    <nav class="bg-gray-50 dark:bg-gray-900 shadow p-2">
+    <nav class="bg-gray-50 dark:bg-gray-900 shadow p-4">
       <div class="container mx-auto px-4 flex items-center justify-between">
 
         <!-- Logo -->
@@ -168,7 +164,7 @@ import PhoneButton from "../components/PhoneButton.astro";
         </div>
 
         <!-- Close Menu Button -->
-        <div class="justify-end px-5 py-5 bg-gray-200 dark:bg-gray-700">
+        <div class="justify-end px-5 py-5 bg-gray-100 dark:bg-gray-800">
           <button id="close-mobile-menu-button" class=" md:pointer-events-auto sm:pointer-events-auto text-gray-500 dark:text-gray-400 focus:outline-none hover:text-gray-800 dark:hover:text-gray-200 transition-colors duration-150">
 
             <!-- Again, don't worry about this, it's just for a symbol -->
@@ -180,6 +176,9 @@ import PhoneButton from "../components/PhoneButton.astro";
         </div>
 
       </div>
+
+      <!-- Style Bar, not in use -->
+      <hr class="shadow p-10 border-gray-200 dark:border-gray-700">
     </nav>
 
     <!-- Main Page Content -->
