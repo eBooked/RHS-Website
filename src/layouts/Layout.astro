@@ -38,9 +38,9 @@ import PhoneButton from "../components/PhoneButton.astro";
   </head>
   </head>
 
-  <body class="bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 transition-colors duration-200">
+  <body class="bg-white dark:bg-dm-light-gray text-gray-900 dark:text-dm-text transition-colors duration-200">
     <!-- Navbar -->
-    <nav class="bg-gray-50 dark:bg-gray-900 shadow p-4">
+    <nav class="bg-gray-50 dark:bg-dm-dark-gray shadow p-4">
       <div class="container mx-auto px-4 flex items-center justify-between">
 
         <!-- Logo -->
@@ -94,7 +94,7 @@ import PhoneButton from "../components/PhoneButton.astro";
         <!-- Menu icon wrapper so they are in a similar place, though the menu icon is only visible when small screen -->
         <div class="flex space-x-8">
         <!-- Darkmode Toggle aria-label="Toggle dark mode" -->
-          <button id="darkmode-button" type="button" class="flex p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+          <button id="darkmode-button" type="button" class="flex p-2 rounded-lg bg-gray-100 dark:bg-dm-light-gray hover:bg-gray-200 dark:hover:bg-dm-highlight-gray transition-colors">
             <!-- Sun icon (shown in dark mode) -->
             <svg class="w-5 h-5 dark:block hidden text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"/></svg>
             <!-- Moon icon (shown in light mode) -->
@@ -103,7 +103,7 @@ import PhoneButton from "../components/PhoneButton.astro";
 
           <!-- Mobile menu button -->
           <div class="lg:hidden flex items-center">
-            <button id="mobile-menu-button" class="text-gray-500 dark:text-gray-400 focus:outline-none hover:text-gray-800 dark:hover:text-gray-200 transition-colors duration-200">
+            <button id="mobile-menu-button" class="text-gray-500 dark:text-dm-text-muted focus:outline-none hover:text-gray-800 dark:hover:text-dm-text transition-colors duration-200">
 
               <!-- The concept of this is that essentially you get a shape. You could also use html entities -->
               <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -118,14 +118,14 @@ import PhoneButton from "../components/PhoneButton.astro";
     <!-- End of navbar -->
 
     <!-- Secondary Navbar for smaller devices -->
-    <nav id="mobile-menu" class="lg:hidden hidden bg-gray-100 dark:bg-gray-800 shadow p-1">
+    <nav id="mobile-menu" class="lg:hidden hidden bg-gray-100 dark:bg-dm-light-gray shadow p-1">
 
       <!-- Mobile menu content wrapper-->
       <div class="lg:hidden flex">
 
         <!-- Menu Content -->
         
-        <!-- These are the same, but have different design on the menus. Fundementally, just put in whichever links and it should
+        <!-- These are the same, but have different design on the menus for phones. Fundementally, just put in whichever links and it should
          all work out -->
         <div class="md:clicker-events-auto flex flex-col items-start w-full px-4 py-4 rounded-lg">   
           <!-- Removed until needed; the logo functions as home
@@ -164,8 +164,8 @@ import PhoneButton from "../components/PhoneButton.astro";
         </div>
 
         <!-- Close Menu Button -->
-        <div class="justify-end px-5 py-5 bg-gray-100 dark:bg-gray-800">
-          <button id="close-mobile-menu-button" class=" md:pointer-events-auto sm:pointer-events-auto text-gray-500 dark:text-gray-400 focus:outline-none hover:text-gray-800 dark:hover:text-gray-200 transition-colors duration-150">
+        <div class="justify-end px-5 py-5 bg-gray-100 dark:bg-dm-light-gray">
+          <button id="close-mobile-menu-button" class=" md:pointer-events-auto sm:pointer-events-auto text-gray-500 dark:text-dm-text-muted focus:outline-none hover:text-gray-800 dark:hover:text-dm-text transition-colors duration-150">
 
             <!-- Again, don't worry about this, it's just for a symbol -->
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -177,8 +177,6 @@ import PhoneButton from "../components/PhoneButton.astro";
 
       </div>
 
-      <!-- Style Bar, not in use -->
-      <hr class="shadow p-10 border-gray-200 dark:border-gray-700">
     </nav>
 
     <!-- Main Page Content -->
@@ -188,7 +186,7 @@ import PhoneButton from "../components/PhoneButton.astro";
 
     <!-- Footer of each page; no components required. No 'secondary footer'. Simply stylized links and images :) 
          Sorry for the wall of hrefs... -->
-    <footer class="mt-16 border-t border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-900">
+    <footer class="border-t border-gray-300 dark:border-dm-highlight-gray bg-gray-100 dark:bg-dm-dark-gray">
       <div class="max-w-6xl mx-auto px-6 py-10">
     
         <!-- Top section -->
@@ -197,7 +195,7 @@ import PhoneButton from "../components/PhoneButton.astro";
           <!-- Brand -->
           <div>
             <h2 class="text-lg font-semibold font-mono bg-golden-yellow dark:bg-golden-yellow dark:text-black p-2">The Iron Riders, FRC 4180</h2>
-            <p class="text-sm font-mono text-gray-500 dark:text-gray-400 mt-2 p-2">
+            <p class="text-sm font-mono text-gray-500 dark:text-dm-text-muted mt-2 p-2">
               Roosevelt High School
             </p>
           </div>
@@ -206,29 +204,29 @@ import PhoneButton from "../components/PhoneButton.astro";
           <div class="grid grid-cols-3 gap-8 text-sm">
             <div class="flex flex-col space-y-2">
               <span class="font-medium font-mono">About Us</span>
-              <a href="#" class="hover:text-black dark:hover:text-white text-gray-500 dark:text-gray-400 font-mono">Our Team</a>
-              <a href="#" class="hover:text-black dark:hover:text-white text-gray-500 dark:text-gray-400 font-mono">Mentors</a>
-              <a href="#" class="hover:text-black dark:hover:text-white text-gray-500 dark:text-gray-400 font-mono">Archive</a>
+              <a href="#" class="hover:text-black dark:hover:text-dm-text text-gray-500 dark:text-dm-text-muted font-mono">Our Team</a>
+              <a href="#" class="hover:text-black dark:hover:text-dm-text text-gray-500 dark:text-dm-text-muted font-mono">Mentors</a>
+              <a href="#" class="hover:text-black dark:hover:text-dm-text text-gray-500 dark:text-dm-text-muted font-mono">Archive</a>
             </div>
     
             <div class="flex flex-col space-y-2 font-mono">
               <span class="font-medium">Resources</span>
-              <a href="#" class="hover:text-black dark:hover:text-white text-gray-500 dark:text-gray-400 font-mono">Digital Resources</a>
-              <a href="#" class="hover:text-black dark:hover:text-white text-gray-500 dark:text-gray-400 font-mono">Calander</a>
+              <a href="#" class="hover:text-black dark:hover:text-dm-text text-gray-500 dark:text-dm-text-muted font-mono">Digital Resources</a>
+              <a href="#" class="hover:text-black dark:hover:text-dm-text text-gray-500 dark:text-dm-text-muted font-mono">Calander</a>
             </div>
 
             <div class="flex flex-col space-y-2 font-mono">
               <span class="font-medium">Community</span>
-              <a href="#" class="hover:text-black dark:hover:text-white text-gray-500 dark:text-gray-400">Contact Us</a>
-              <a href="#" class="hover:text-black dark:hover:text-white text-gray-500 dark:text-gray-400">Join</a>
-              <a href="#" class="hover:text-black dark:hover:text-white text-gray-500 dark:text-gray-400">Donate</a>
+              <a href="#" class="hover:text-black dark:hover:text-dm-text text-gray-500 dark:text-dm-text-muted">Contact Us</a>
+              <a href="#" class="hover:text-black dark:hover:text-dm-text text-gray-500 dark:text-dm-text-muted">Join</a>
+              <a href="#" class="hover:text-black dark:hover:text-dm-text text-gray-500 dark:text-dm-text-muted">Donate</a>
             </div>
           </div>
     
         </div>
     
         <!-- Bottom bar for footer -->
-        <div class="mt-10 pt-6 border-t border-gray-300 dark:border-gray-700 text-xs text-gray-800 dark:text-gray-300 text-center">
+        <div class="mt-10 pt-6 border-t border-gray-300 dark:border-dm-highlight-gray text-xs text-gray-800 dark:text-dm-text-muted text-center">
           <!-- If text wanted, put it here -->
         </div>
     

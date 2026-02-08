@@ -13,6 +13,12 @@
   /* Other colors */
   --color-dark-gray: #18212F;
 
+  /* Dark mode – neutral grays (no blue); change these to tweak the whole dark theme */
+  --color-dm-dark-gray: #1a1a1a;
+  --color-dm-light-gray: #2d2d2d;
+  --color-dm-highlight-gray: #404040;
+  --color-dm-text: #e5e5e5;
+  --color-dm-text-muted: #a3a3a3;
 }
 
 /* UNIVERSAL VARIABLES */

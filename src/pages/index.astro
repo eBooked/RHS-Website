@@ -17,7 +17,10 @@ import Layout from '../layouts/Layout.astro';
 				<p class="text-lg md:text-xl text-white/90 mt-2 font-mono max-w-2xl">
 					FRC 4180 • Roosevelt High School
 				</p>
-				<a href="/ourteam" class="inline-block mt-6 px-6 py-3 bg-yellow-400 text-black font-mono font-semibold rounded-md hover:bg-yellow-300 transition-colors">
+				<a href="/ourteam" 
+					class="inline-block mt-6 px-6 py-3 bg-yellow-400 text-black font-mono font-semibold rounded-md 
+					hover:bg-yellow-300 transition-colors"
+				>
 					Meet the Team
 				</a>
 			</div>
@@ -25,14 +28,14 @@ import Layout from '../layouts/Layout.astro';
 	</section>
 
 	<!-- Intro Section -->
-	<section class="py-16 md:py-24 bg-white dark:bg-gray-800/50">
+	<section class="py-16 md:py-24 bg-white dark:bg-dm-light-gray/80">
 		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-			<h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white font-mono mb-6">
+			<h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-dm-text font-mono mb-6">
 				Welcome to The Iron Riders
 			</h2>
 
 			<!-- Intro message -->
-			<p class="text-gray-600 dark:text-gray-300 text-lg max-w-3xl leading-relaxed">
+			<p class="text-gray-600 dark:text-dm-text-muted text-lg max-w-3xl leading-relaxed">
 				Welcome to The Iron Riders! We are FRC Team 4180 located in Seattle; we are a team of competitive students and mentors
 				focused on building robots to learn real-world applications and skills!
 			</p>
@@ -40,26 +43,41 @@ import Layout from '../layouts/Layout.astro';
 	</section>
 
 	<!-- Quick Links / CTA -->
-	<section class="py-16 bg-gray-100 dark:bg-gray-900">
+	<section class="py-16 bg-gray-100 dark:bg-dm-dark-gray">
 		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-			<h2 class="text-xl font-semibold text-gray-900 dark:text-white font-mono mb-8">
+			<h2 class="text-xl font-semibold text-gray-900 dark:text-dm-text font-mono mb-8">
 				Get Involved
 			</h2>
 
 			<!-- Square links (tm) -->
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-				<a href="/ourteam" class="p-6 rounded-lg bg-white dark:bg-gray-800 shadow hover:shadow-md transition-shadow border border-gray-200 dark:border-gray-700">
-					<span class="font-mono font-medium text-gray-900 dark:text-white">Our Team</span>
-					<p class="mt-2 text-sm text-gray-500 dark:text-gray-400">Meet the student leaders and mentors part of our community</p>
+				<!-- Our Team squarelink -->
+				<a href="/ourteam" 
+					class="p-6 rounded-lg bg-gray-50 hover:bg-white dark:bg-dm-light-gray dark:hover:bg-dm-highlight-gray border border-gray-200 dark:border-dm-highlight-gray 
+					transition-colors duration-200"
+				>
+					<span class="font-mono font-medium text-gray-900 dark:text-dm-text">Our Team</span>
+					<p class="mt-2 text-sm text-gray-500 dark:text-dm-text-muted">Meet the student leaders and mentors part of our community</p>
 				</a>
-				<a href="/sponsors" class="p-6 rounded-lg bg-white dark:bg-gray-800 shadow hover:shadow-md transition-shadow border border-gray-200 dark:border-gray-700">
-					<span class="font-mono font-medium text-gray-900 dark:text-white">Sponsors</span>
-					<p class="mt-2 text-sm text-gray-500 dark:text-gray-400">A big thanks to all of our sponsors who help us!</p>
+
+				<!-- Join Us squarelink -->
+				<a href="/joinus" 
+					class="p-6 rounded-lg bg-gray-50 hover:bg-white dark:bg-dm-light-gray dark:hover:bg-dm-highlight-gray border border-gray-200 dark:border-dm-highlight-gray 
+					transition-colors duration-200"
+				>
+					<span class="font-mono font-medium text-gray-900 dark:text-dm-text">Join Us</span>
+					<p class="mt-2 text-sm text-gray-500 dark:text-dm-text-muted">If you're interested, click here for more details!</p>
 				</a>
-				<a href="/join" class="p-6 rounded-lg bg-white dark:bg-gray-800 shadow hover:shadow-md transition-shadow border border-gray-200 dark:border-gray-700">
-					<span class="font-mono font-medium text-gray-900 dark:text-white">Join Us</span>
-					<p class="mt-2 text-sm text-gray-500 dark:text-gray-400">It's no hastle at all! Just click here!</p>
+
+				<!-- Contact Us squarelink -->
+				<a href="/contact" 
+					class="p-6 rounded-lg bg-gray-50 hover:bg-white dark:bg-dm-light-gray dark:hover:bg-dm-highlight-gray border border-gray-200 dark:border-dm-highlight-gray 
+					transition-colors duration-200"
+				>
+					<span class="font-mono font-medium text-gray-900 dark:text-dm-text">Contact Us</span>
+					<p class="mt-2 text-sm text-gray-500 dark:text-dm-text-muted">If you have any questions or want more info, just ask us!</p>
 				</a>
+
 			</div>
 
 		</div>
