@@ -14,11 +14,12 @@
   --color-dark-gray: #18212F;
 
   /* Dark mode – neutral grays (no blue); change these to tweak the whole dark theme */
-  --color-dm-dark-gray: #1a1a1a;
-  --color-dm-light-gray: #2d2d2d;
-  --color-dm-highlight-gray: #404040;
-  --color-dm-text: #e5e5e5;
-  --color-dm-text-muted: #a3a3a3;
+  --color-dm-dark-gray: #0f1115;      /* main page background */
+--color-dm-light-gray: #1a1f28;     /* cards/nav/surfaces */
+--color-dm-highlight-gray: #262c38; /* hover/raised/sections */
+
+--color-dm-text: #e6e9ef;           /* primary text */
+--color-dm-text-muted: #9aa3b2;     /* secondary text */
 }
 
 /* UNIVERSAL VARIABLES */
