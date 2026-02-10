@@ -1,7 +1,7 @@
 /* Imports Tailwind */
 @import "tailwindcss";
 
-/* Tailwind v4: Use class-based darkmode */
+/* Tailwind v4: Use class-based darkmode. Allows 'dark:' - makes it SO much easier thank god */
 @custom-variant dark (&:where(.dark, .dark *));
 
 /* Custom colors */
@@ -13,13 +13,22 @@
   /* Other colors */
   --color-dark-gray: #18212F;
 
-  /* Dark mode – neutral grays (no blue); change these to tweak the whole dark theme */
-  --color-dm-dark-gray: #0f1115;      /* main page background */
---color-dm-light-gray: #1a1f28;     /* cards/nav/surfaces */
---color-dm-highlight-gray: #262c38; /* hover/raised/sections */
+  /* Light mode colors – edit here to change the whole light theme */
+  --color-lm-bg: #ffffff;              /* page / section background */
+  --color-lm-dark-gray: #f3f4f6;      /* gray-100: footer, mobile menu, button bg */
+  --color-lm-light-gray: #f9fafb;     /* gray-50: nav, cards */
+  --color-lm-highlight-gray: #e5e7eb; /* gray-200: hover, card borders */
+  --color-lm-border: #d1d5db;         /* gray-300: footer border */
+  --color-lm-text: #111827;           /* gray-900: primary text / headings */
+  --color-lm-text-muted: #6b7280;     /* gray-500: secondary text */
+  --color-lm-text-muted-alt: #4b5563;  /* gray-600: body copy, icons */
 
---color-dm-text: #e6e9ef;           /* primary text */
---color-dm-text-muted: #9aa3b2;     /* secondary text */
+  /* Dark mode colors */
+  --color-dm-dark-gray: #0f1115;      /* main page background */
+  --color-dm-light-gray: #1a1f28;     /* cards/nav/surfaces */
+  --color-dm-highlight-gray: #262c38;  /* hover/raised/sections */
+  --color-dm-text: #e6e9ef;           /* primary text */
+  --color-dm-text-muted: #9aa3b2;     /* secondary text */
 }
 
 /* UNIVERSAL VARIABLES */
@@ -34,6 +43,7 @@
     --button-width: 9rem;
 }
 
+/* main html */
 html, body {
   height: 100%;
   margin: 0;

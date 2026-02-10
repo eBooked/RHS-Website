@@ -11,11 +11,13 @@ interface Props {
 const { label, href } = Astro.props as Props;
 ---
 
+<!-- This just checks if it's a href. If not, it creates a button with theoretically a specific purpose. It only exists if you want
+ a button that isn't just a link to a page. Otherwise, don't worry about it -->
 {href ? (
     <a
       href={href}
       class=
-        "w-[var(--button-width)] px-[var(--button-padding-x)] py-[var(--button-padding-y)] text-black dark:text-dm-text rounded-md hover:bg-gray-100 dark:hover:bg-dm-light-gray 
+        "w-[var(--button-width)] px-[var(--button-padding-x)] py-[var(--button-padding-y)] text-lm-text dark:text-dm-text rounded-md hover:bg-lm-dark-gray dark:hover:bg-dm-light-gray 
         transition-colors duration-150 flex items-center justify-center font-mono"
     >
       {label}

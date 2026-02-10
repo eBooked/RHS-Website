@@ -1,0 +1,36 @@
+---
+
+import type { string } from 'astro:schema';
+
+interface Props {
+  person: string;
+  title: string;
+  image: string;
+}
+
+const { person, title, image } = Astro.props as Props;
+---
+<!-- Box wrapper -->
+<div class="flex-col p-10">
+    <!-- Image, uses {image} as the path and {person} as alt-->
+    <div class="flex justify-center p-1">
+        <img 
+            src= {image}; 
+            alt= {person}; 
+            class="flex w-[16vh] h-[22vh] md:w-[20vh] md:h-[25vh] object-cover object-center p-4 bg-golden-yellow"
+        />
+    </div>
+    <!-- Title of person -->
+    <div class="flex justify-center p-1">
+        <h1 class="font-bold font-mono text-xl px-10 dark:bg-dm-dark-gray">
+            {title}
+        </h1>
+    </div>
+
+    <!-- Name of person -->
+    <div class="flex justify-center p-1">
+        <h1 class="font-mono">
+            {person}
+        </h1>
+    </div>
+</div>

@@ -1,80 +1,148 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+/*Imports a component, leadershipbox. So styling is a bit easier, as each one connects back to the component*/
+import LeadershipBox from '../components/LeadershipBox.astro';
+
 ---
 <Layout>
-    <!-- Title -->
-    <div class="py-5 md:py-8 bg-white dark:bg-dm-light-gray/80 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-dm-text font-mono mb-6">Our Team - Departments</h1>
-    </div>
+	<!-- Wrapper for department section -->
+	<div class="py-5">
 
-	<!-- Engineering Section -->
-	<section class="py-6 md:py-8 bg-white dark:bg-dm-light-gray/80">
-		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-			<h2 class="text-xl md:text-2xl font-medium text-gray-900 dark:text-dm-text font-mono mb-6">
-				Engineering Department
-			</h2>
-
-			<!-- Description -->
-			<p class="text-gray-600 dark:text-dm-text-muted text-lg max-w-4xl leading-relaxed">
-				The engineering department is composed of two separate sub-teams which work together to design and build the robot. 
-                Before the build season, both sub-teams hold curriculum meetings to teach newer members how to operate workshop tools 
-                and use CAD programs. In addition, they teach basic design processes so everyone can help with the final design. 
-                Throughout the build season, the engineering department is responsible for designing and building the robot within the 
-                timeframe. During competition, department members are the primary group in the pit, so they can fix any problems that may 
-                arise. 
-			</p>
+		<!-- Title -->
+		<div class="py-5 md:py-8 bg-lm-bg dark:bg-dm-light-gray/80 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h1 class="text-3xl md:text-4xl font-bold text-lm-text dark:text-dm-text font-mono mb-6">Our Team - Departments</h1>
 		</div>
-	</section>
-
-	<!-- Software Section -->
-	<section class="py-6 md:py-8 bg-white dark:bg-dm-light-gray/80">
-		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-			<h2 class="text-xl md:text-2xl font-medium text-gray-900 dark:text-dm-text font-mono mb-6">
-				Software Department
-			</h2>
-
-			<!-- Description -->
-			<p class="text-gray-600 dark:text-dm-text-muted text-lg max-w-4xl leading-relaxed">
-				The Software Department is responsible for the backend of the robot. Before the build season, they teach newer members 
-                how to use Java and the tools they use to code, such as VS Code. During the build season, they write the code for the robot,
-                including not only basic driving and manipulator control, but also image recognition, motion profiling, and more. They test
-                the robot rigorously to ensure everything works as expected, which is then handed off to Drive Team. 
-			</p>
-		</div>
-	</section>
-
-    <!-- Business Section -->
-	<section class="py-6 md:py-8 bg-white dark:bg-dm-light-gray/80">
-		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-			<h2 class="text-xl md:text-2xl font-medium text-gray-900 dark:text-dm-text font-mono mb-6">
-				Business Department
-			</h2>
-
-			<!-- Description -->
-			<p class="text-gray-600 dark:text-dm-text-muted text-lg max-w-4xl leading-relaxed">
-				The business department has a wide range of responsibilities throughout the year. At the start of the year, the Business 
-                Department focuses on finding sponsors and applying for available grants to obtain team funds. Throughout the build season,
-                the department handles money and purchase requests for the various components required. In addition to these, the department 
-                has a variety of other tasks, such as logo voting, working with communications, and team branding. 
-			</p>
-		</div>
-	</section>
-
-    <!-- Strategy Section -->
-	<section class="py-6 md:py-8 bg-white dark:bg-dm-light-gray/80">
-		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-			<h2 class="text-xl md:text-2xl font-medium text-gray-900 dark:text-dm-text font-mono mb-6">
-				Strategy Department
-			</h2>
-
-			<!-- Description -->
-			<p class="text-gray-600 dark:text-dm-text-muted text-lg max-w-4xl leading-relaxed">
-				The Strategy Department is responsible for having expertise in the rules and regulations of the game. This includes 
-                determining how the robot will play, piloting the robot during the teleoperated period, and strategizing with other 
-                teams on our alliance. 
-			</p>
-		</div>
-	</section>
-
 	
+		<!-- Engineering Section -->
+		<section class="py-6 md:py-8 bg-lm-bg dark:bg-dm-light-gray/80">
+	
+			<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+				<h2 class="text-xl md:text-2xl font-medium text-lm-text dark:text-dm-text font-mono mb-6">
+					Engineering Department
+				</h2>
+	
+				<!-- Description -->
+				<p class="text-lm-text-muted-alt dark:text-dm-text-muted text-lg max-w-4xl leading-relaxed">
+					The engineering department is composed of two separate sub-teams which work together to design and build the robot. 
+					Before the build season, both sub-teams hold curriculum meetings to teach newer members how to operate workshop tools 
+					and use CAD programs. In addition, they teach basic design processes so everyone can help with the final design. 
+					Throughout the build season, the engineering department is responsible for designing and building the robot within the 
+					timeframe. During competition, department members are the primary group in the pit, so they can fix any problems that may 
+					arise. 
+				</p>
+			</div>
+	
+			<!-- Image  -->
+			<div class="py-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+				<img 
+					src="/assets/2025preseason.jpg" 
+					alt="Iron Riders Preseason 2025" 
+					class="w-[40vh] h-[40vh] md:w-[50vh] md:h-[50vh] object-cover object-top"
+				/>
+			</div>
+		</section>
+	
+		<!-- Software Section -->
+		<section class="py-6 md:py-8 bg-lm-bg dark:bg-dm-light-gray/80">
+	
+			<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+				<h2 class="text-xl md:text-2xl font-medium text-lm-text dark:text-dm-text font-mono mb-6">
+					Software Department
+				</h2>
+	
+				<!-- Description -->
+				<p class="text-lm-text-muted-alt dark:text-dm-text-muted text-lg max-w-4xl leading-relaxed">
+					The Software Department is responsible for the backend of the robot. Before the build season, they teach newer members 
+					how to use Java and the tools they use to code, such as VSCode. During the build season, they write the code for the robot,
+					including not only basic driving and manipulator control, but also image recognition, motion profiling, and more. They test
+					the robot rigorously to ensure everything works as expected, which is then handed off to Drive Team. 
+				</p>
+			</div>
+	
+			<!-- Image  -->
+			<div class="py-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+				<img 
+					src="/assets/2025preseason.jpg" 
+					alt="Iron Riders Preseason 2025" 
+					class="w-[40vh] h-[40vh] md:w-[50vh] md:h-[50vh] object-cover object-top"
+				/>
+			</div>
+		</section>
+	
+		<!-- Business Section -->
+		<section class="flex-col py-6 md:py-8 bg-lm-bg dark:bg-dm-light-gray/80">
+	
+			<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+				<h2 class="text-xl md:text-2xl font-medium text-lm-text dark:text-dm-text font-mono mb-6">
+					Business Department
+				</h2>
+	
+				<!-- Description -->
+				<p class="text-lm-text-muted-alt dark:text-dm-text-muted text-lg max-w-4xl leading-relaxed">
+					The business department has a wide range of responsibilities throughout the year. At the start of the year, the Business 
+					Department focuses on finding sponsors and applying for available grants to obtain team funds. Throughout the build season,
+					the department handles money and purchase requests for the various components required. In addition to these, the department 
+					has a variety of other tasks, such as logo voting, working with communications, and team branding. 
+				</p>
+			</div>
+	
+			<!-- Image  -->
+			<div class="py-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+				<img 
+					src="/assets/2025preseason.jpg" 
+					alt="Iron Riders Preseason 2025" 
+					class="w-[40vh] h-[40vh] md:w-[50vh] md:h-[50vh] object-cover object-top"
+				/>
+			</div>
+		</section>
+	
+		<!-- Strategy Section -->
+		<section class="py-6 md:py-8 bg-lm-bg dark:bg-dm-light-gray/80">
+	
+			<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+				<h2 class="text-xl md:text-2xl font-medium text-lm-text dark:text-dm-text font-mono mb-6">
+					Strategy Department
+				</h2>
+	
+				<!-- Description -->
+				<p class="text-lm-text-muted-alt dark:text-dm-text-muted text-lg max-w-4xl leading-relaxed">
+					The Strategy Department is responsible for having expertise in the rules and regulations of the game. This includes 
+					determining how the robot will play, piloting the robot during the teleoperated period, and strategizing with other 
+					teams on our alliance. 
+				</p>
+			</div>
+	
+			<!-- Image  -->
+			<div class="py-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+				<img 
+					src="/assets/2025preseason.jpg" 
+					alt="Iron Riders Preseason 2025" 
+					class="w-[40vh] h-[40vh] md:w-[50vh] md:h-[50vh] object-cover object-top"
+				/>
+			</div>
+		</section>
+	</div>
+
+	<!-- Wrapper for department section -->
+	<div class="py-5">
+		
+		<!-- Title -->
+		<div class="py-5 md:py-8 bg-lm-bg dark:bg-dm-light-gray/80 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h1 class="text-3xl md:text-4xl font-bold text-lm-text dark:text-dm-text font-mono mb-6">Our Team - Leadership</h1>
+		</div>
+	
+		<!-- Grid of leadership! -->
+		<div class="grid grid-col-3 gap-10 justify-center">
+			<!-- Top leadership -->
+			<div class="flex-col flex">
+				<LeadershipBox
+					person="Kaylee Shin";
+					title="Technical Executive";
+					image="../assets/Leadership photos/CTO.JPG"
+				/>
+			</div>
+
+		</div>
+	</div>
 </Layout>
