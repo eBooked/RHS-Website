@@ -15,9 +15,9 @@ import PhoneButton from "../components/PhoneButton.astro";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <meta charset="UTF-8" />
-    <title>Your Site</title>
+    <title>Iron Riders</title>
 
-    <!-- Early inline script to apply dark mode -->
+    <!-- Early inline script to apply dark mode before the page loads -->
     <script is:inline>
       (function() {
         // Check localStorage for saved theme
@@ -35,10 +35,28 @@ import PhoneButton from "../components/PhoneButton.astro";
         }
       })();
     </script>
-  </head>
+
+    <!-- This inline is for the to-top button, which is made an inline so prevent an abundance of scripts, as it's very simple -->
+    <script is:inline>
+      document.addEventListener("DOMContentLoaded", () => {
+      const btn = document.getElementById("back-to-top");
+        // Scroll to top when clicked
+        btn.addEventListener("click", () => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      });
+    </script>
   </head>
 
   <body class="bg-lm-bg dark:bg-dm-light-gray text-lm-text dark:text-dm-text transition-colors duration-200">
+    <!-- Back to top button, always on screen -->
+    <button
+    id="back-to-top"
+    class="fixed bottom-5 right-5 bg-yellow-400 text-black px-4 py-2 rounded-full shadow-lg hover:bg-yellow-300 transition-colors"
+    >
+      ↑
+    </button>
+
     <!-- Navbar -->
     <nav class="bg-lm-light-gray dark:bg-dm-dark-gray shadow p-4">
       <div class="container mx-auto px-4 flex items-center justify-between">

@@ -7,15 +7,15 @@ import LeadershipBox from '../components/LeadershipBox.astro';
 ---
 <Layout>
 	<!-- Wrapper for department section -->
-	<div class="py-5">
+	<div class="py-5 bg-lm-dark-gray dark:bg-dm-highlight-gray">
 
 		<!-- Title -->
-		<div class="py-5 md:py-8 bg-lm-bg dark:bg-dm-light-gray/80 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="py-5 md:py-8 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 			<h1 class="text-3xl md:text-4xl font-bold text-lm-text dark:text-dm-text font-mono mb-6">Our Team - Departments</h1>
 		</div>
 	
 		<!-- Engineering Section -->
-		<section class="py-6 md:py-8 bg-lm-bg dark:bg-dm-light-gray/80">
+		<section class="py-6 md:py-8">
 	
 			<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 				<h2 class="text-xl md:text-2xl font-medium text-lm-text dark:text-dm-text font-mono mb-6">
@@ -44,7 +44,7 @@ import LeadershipBox from '../components/LeadershipBox.astro';
 		</section>
 	
 		<!-- Software Section -->
-		<section class="py-6 md:py-8 bg-lm-bg dark:bg-dm-light-gray/80">
+		<section class="py-6 md:py-8">
 	
 			<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 				<h2 class="text-xl md:text-2xl font-medium text-lm-text dark:text-dm-text font-mono mb-6">
@@ -71,7 +71,7 @@ import LeadershipBox from '../components/LeadershipBox.astro';
 		</section>
 	
 		<!-- Business Section -->
-		<section class="flex-col py-6 md:py-8 bg-lm-bg dark:bg-dm-light-gray/80">
+		<section class="flex-col py-6 md:py-8">
 	
 			<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 				<h2 class="text-xl md:text-2xl font-medium text-lm-text dark:text-dm-text font-mono mb-6">
@@ -98,7 +98,7 @@ import LeadershipBox from '../components/LeadershipBox.astro';
 		</section>
 	
 		<!-- Strategy Section -->
-		<section class="py-6 md:py-8 bg-lm-bg dark:bg-dm-light-gray/80">
+		<section class="py-6 md:py-8">
 	
 			<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 				<h2 class="text-xl md:text-2xl font-medium text-lm-text dark:text-dm-text font-mono mb-6">
@@ -124,22 +124,30 @@ import LeadershipBox from '../components/LeadershipBox.astro';
 		</section>
 	</div>
 
-	<!-- Wrapper for department section -->
-	<div class="py-5">
+	<!-- Wrapper for leadership section -->
+	<div class="py-5 bg-lm-dark-gray dark:bg-dm-highlight-gray">
 		
-		<!-- Title -->
-		<div class="py-5 md:py-8 bg-lm-bg dark:bg-dm-light-gray/80 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+		<!-- Title + Desc -->
+		<div class="py-5 md:py-8 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+			<!-- Title -->
 			<h1 class="text-3xl md:text-4xl font-bold text-lm-text dark:text-dm-text font-mono mb-6">Our Team - Leadership</h1>
+
+			<!-- Desc -->
+			<p class="text-lm-text-muted-alt dark:text-dm-text-muted text-lg max-w-4xl leading-relaxed">
+				Big shoutout to all of our incredible student leaders who spend countless hours to our team! 
+			</p>
 		</div>
+
+		
 	
-		<!-- Grid of leadership! -->
-		<div class="grid grid-col-3 gap-10 justify-center">
+		<!-- Flex-col of leadership! -->
+		<div class="flex-col flex gap-10 justify-center py-15">
 			<!-- Top leadership -->
-			<div class="flex-col flex">
+			<div class="flex flex-col md:flex-row justify-center items-center md:space-x-30">
 				<LeadershipBox
-					person="Kaylee Shin";
-					title="Technical Executive";
-					image="../assets/Leadership photos/CTO.JPG"
+					person="Anna Lai";
+					title="Operations Executive";
+					image="../assets/Leadership photos/COO.JPG"
 				/>
 
 				<LeadershipBox
@@ -149,6 +157,60 @@ import LeadershipBox from '../components/LeadershipBox.astro';
 				/>				
 			</div>
 
+			<!-- Secondary leadership P1-->
+			<div class="flex flex-col md:flex-row justify-center items-center md:space-x-30">
+				<LeadershipBox
+					person="Andrew Day";
+					title="Build Director";
+					image="../assets/Leadership photos/Build Director.JPG"
+				/>
+
+				<LeadershipBox
+					person="William Wagner";
+					title="Design Director";
+					image="../assets/Leadership photos/Design Director.JPG"
+				/>	
+
+				<LeadershipBox
+					person="Ryan Elbert";
+					title="Controls Director";
+					image="../assets/Leadership photos/Software Director.JPG"
+				/>			
+			</div>
+			<!-- Secondary leadership P2-->
+			<div class="flex flex-col md:flex-row justify-center items-center md:space-x-30">
+				<LeadershipBox
+					person="Lynn Anderson";
+					title="Communications Director";
+					image="../assets/Leadership photos/Communications Director.JPG"
+				/>
+
+				<LeadershipBox
+					person="Kira Outhred";
+					title="Strategy Director";
+					image="../assets/Leadership photos/Strategy Director.JPG"
+				/>	
+
+				<LeadershipBox
+					person="Lalitha Muralidhar";
+					title="Finance Director";
+					image="../assets/Leadership photos/Finance Director.JPG"
+				/>			
+			</div>
+			<!-- Secondary leadership P3-->
+			<div class="flex flex-col md:flex-row justify-center items-center md:space-x-30">
+				<LeadershipBox
+					person="Rio Johnson";
+					title="Marketing Director";
+					image="../assets/Leadership photos/Marketing Director.JPG"
+				/>
+
+				<LeadershipBox
+					person="Zoe Bates";
+					title="Outreach Director";
+					image="../assets/Leadership photos/Outreach Director.JPG"
+				/>	
+			</div>
 		</div>
 	</div>
 </Layout>
