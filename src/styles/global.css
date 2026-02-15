@@ -23,8 +23,9 @@
   --color-lm-text-muted: #6b7280;     /* gray-500: secondary text */
   --color-lm-text-muted-alt: #4b5563;  /* gray-600: body copy, icons */
 
-  /* Dark mode colors */
+  /* Dark mode colors. Less colors overall due to annoying tailwind restrictions :( */
   --color-dm-dark-gray: #0f1115;      /* main page background */
+  --color-dm-mid-gray: #151821;       /* In between gray shade */
   --color-dm-light-gray: #1a1f28;     /* cards/nav/surfaces */
   --color-dm-highlight-gray: #262c38;  /* hover/raised/sections */
   --color-dm-text: #e6e9ef;           /* primary text */
