@@ -1,8 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-/*Imports a component, leadershipbox. So styling is a bit easier, as each one connects back to the component*/
+/*Imports a component, leadershipbox and mentorbox. So styling is a bit easier, as each one connects back to the component*/
 import LeadershipBox from '../components/LeadershipBox.astro';
+import MentorBox from '../components/MentorBox.astro';
 
 ---
 <Layout>
@@ -209,6 +210,94 @@ import LeadershipBox from '../components/LeadershipBox.astro';
 					person="Zoe Bates";
 					title="Outreach Director";
 					image="../assets/Leadership photos/Outreach Director.JPG"
+				/>	
+			</div>
+		</div>
+	</div>
+
+	<!-- Wrapper for leadership section -->
+	<div class="py-10 bg-lm-dark-gray dark:bg-dm-light-gray">
+		
+		<!-- Title + Desc -->
+		<div class="py-5 md:py-8 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+			<!-- Title -->
+			<h1 class="text-3xl md:text-4xl font-bold text-lm-text dark:text-dm-text font-mono mb-6">Our Team - Mentors</h1>
+
+			<!-- Desc -->
+			<p class="text-lm-text-muted-alt dark:text-dm-text-muted text-lg max-w-4xl leading-relaxed">
+				The following is a list of all of our incredible mentors who help us throughout the year!
+			</p>
+		</div>
+
+		<!-- Flex-col of mentors! -->
+		<div class="flex-col flex gap-10 justify-center py-15">
+
+			<div class="flex flex-col md:flex-row justify-center items-center md:space-x-30">
+				<MentorBox
+					person="Anna Lai";
+					title="Operations Executive";
+					image="../assets/logo.png";
+				/>
+
+				<MentorBox
+					person="Kaylee Shin";
+					title="Technical Executive";
+					image="../assets/logo.png";
+				/>				
+			</div>
+
+			<!-- Secondary leadership P1-->
+			<div class="flex flex-col md:flex-row justify-center items-center md:space-x-30">
+				<MentorBox
+					person="Andrew Day";
+					title="Build Director";
+					image="../assets/logo.png";
+				/>
+
+				<MentorBox
+					person="William Wagner";
+					title="Design Director";
+					image="../assets/logo.png";
+				/>	
+
+				<MentorBox
+					person="Ryan Elbert";
+					title="Controls Director";
+					image="../assets/logo.png";
+				/>			
+			</div>
+			<!-- Secondary leadership P2-->
+			<div class="flex flex-col md:flex-row justify-center items-center md:space-x-30">
+				<MentorBox
+					person="Lynn Anderson";
+					title="Communications Director";
+					image="../assets/logo.png";
+				/>
+
+				<MentorBox
+					person="Kira Outhred";
+					title="Strategy Director";
+					image="../assets/logo.png";
+				/>	
+
+				<MentorBox
+					person="Lalitha Muralidhar";
+					title="Finance Director";
+					image="../assets/logo.png";
+				/>			
+			</div>
+			<!-- Secondary leadership P3-->
+			<div class="flex flex-col md:flex-row justify-center items-center md:space-x-30">
+				<MentorBox
+					person="Rio Johnson";
+					title="Marketing Director";
+					image="../assets/logo.png";
+				/>
+
+				<MentorBox
+					person="Zoe Bates";
+					title="Outreach Director";
+					image="../assets/logo.png";
 				/>	
 			</div>
 		</div>
