@@ -11,18 +11,18 @@ interface Props {
 const { person, title, image } = Astro.props as Props;
 ---
 <!-- Box wrapper -->
-<div class="flex-col">
+<div class="flex-col w-[15%] min-w-60">
     <!-- Image, uses {image} as the path and {person} as alt-->
     <div class="flex justify-center p-1">
         <img 
             src= {image}; 
             alt= {person}; 
-            class="flex w-[20vh] h-[25vh] md:w-[22vh] md:h-[30vh] object-cover object-center p-2 md:p-4 bg-golden-yellow"
+            class="flex w-[20vh] h-[20vh] md:w-[20vh] md:h-[20vh] object-cover object-center p-2 md:p-4 bg-lm-dark-gray dark:bg-dm-light-gray"
         />
     </div>
     <!-- Title of person -->
     <div class="flex justify-center p-1">
-        <h1 class="inline-block whitespace-nowrap font-bold font-mono text-lg px-2 bg-lm-dark-gray dark:bg-dm-dark-gray">
+        <h1 class="inline-block whitespace-nowrap font-bold font-mono text-lg px-2 bg-lm-dark-gray dark:bg-dm-mid-gray">
             {title}
         </h1>
     </div>
