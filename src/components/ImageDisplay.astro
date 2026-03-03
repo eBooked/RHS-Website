@@ -1,30 +1,71 @@
 ---
 interface Props {
   label: string;
+  description: string;
   images: { href: string; label: string }[];
 }
 
-const { label, images } = Astro.props as Props;
+const { label, description, images } = Astro.props as Props;
 ---
+<!-- 
+  Wrapper "image-carousel", so it can be scoped. That means we can select all images within the scope and do stuff to them without 
+  affecting the rest of the page or other displays. 
+-->
+<section class="image-carousel max-w-3xl mx-auto my-12 p-3">
 
-<section class="image-carousel max-w-3xl mx-auto my-12">
-  <h2 class="text-2xl font-semibold mb-4">{label}</h2>
+  <!-- Label -->
+  <h2 class="text-2xl font-semibold">{label}</h2>
+
+  <!-- Description -->
+   <div class="py-3 text-lm-text-muted-alt dark:text-dm-text-muted text-lg max-w-3xl leading-relaxed">
+      {description}
+   </div>
 
   <!-- Image Display -->
   <div class="relative w-full h-80 overflow-hidden rounded-2xl shadow-lg">
+
+    <!-- This may look confusing, but don't worry. Here's the rundown:
+      Mapping the images essentially repeats the code for each image.
+      The data-index is used to track the image and connect it to the button.
+
+      This:
+      ${    index === 0 ? "opacity-100" : "opacity-0"
+
+      Looks terrifying, but it's not too bad. It just means that the image with index 0 is visible, and the rest are not.
+    -->
+
     {images.map((img, index) => (
       <img
         src={img.href}
         alt={img.label}
         data-index={index}
+        
         class={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
           index === 0 ? "opacity-100" : "opacity-0"
         }`}
       />
     ))}
+
+    <!-- Left Button -->
+    <button
+      aria-label="Previous Image"
+      class="absolute top-1/2 left-2 -translate-y-1/2 h-40 bg-gray-800/50 text-white p-2 rounded-full hover:bg-gray-800 transition"
+      data-action="prev"
+    >
+      &#8592;
+    </button>
+
+    <!-- Right Button -->
+    <button
+      aria-label="Next Image"
+      class="absolute top-1/2 right-2 -translate-y-1/2 h-40 bg-gray-800/60 text-white p-2 rounded-full hover:bg-gray-800/90 transition"
+      data-action="next"
+    >
+      &#8594;
+    </button>
   </div>
 
-  <!-- Bottom Selector Bar -->
+  <!-- Bottom Selector Bar, repeats the code for each image. -->
   <div class="flex mt-4 gap-2">
     {images.map((_, index) => (
       <button
@@ -37,32 +78,63 @@ const { label, images } = Astro.props as Props;
     ))}
   </div>
 
-  <!-- Scoped Script -->
-  <script is:inline>
-    const section = document.currentScript.closest(".image-carousel");
-    const images = section.querySelectorAll("img[data-index]");
-    const buttons = section.querySelectorAll("button[data-index]");
-
-    buttons.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const index = btn.dataset.index;
-
+    <!-- Scoped JS -->
+    <script is:inline>
+      // Get the current carousel instance
+      const section = document.currentScript.closest(".image-carousel");
+  
+      // Images in this carousel only
+      const images = section.querySelectorAll("img[data-index]");
+  
+      // Bottom selector buttons
+      const buttons = section.querySelectorAll("button[data-index]");
+  
+      // Side navigation buttons
+      const prevBtn = section.querySelector('button[data-action="prev"]');
+      const nextBtn = section.querySelector('button[data-action="next"]');
+  
+      // Keep track of current visible image
+      let currentIndex = 0;
+  
+      // Function to update which image is visible
+      function showImage(index) {
+        // Wrap around if index is out of bounds
+        if (index < 0) index = images.length - 1;
+        if (index >= images.length) index = 0;
+        currentIndex = index;
+  
+        // Hide all images
         images.forEach((img) => {
           img.classList.remove("opacity-100");
           img.classList.add("opacity-0");
         });
-
+  
+        // Reset all bottom buttons
         buttons.forEach((b) => {
           b.classList.remove("bg-gray-800");
           b.classList.add("bg-gray-300");
         });
-
-        images[index].classList.remove("opacity-0");
-        images[index].classList.add("opacity-100");
-
-        btn.classList.remove("bg-gray-300");
-        btn.classList.add("bg-gray-800");
+  
+        // Show selected image
+        images[currentIndex].classList.remove("opacity-0");
+        images[currentIndex].classList.add("opacity-100");
+  
+        // Highlight corresponding bottom selector
+        buttons[currentIndex].classList.remove("bg-gray-300");
+        buttons[currentIndex].classList.add("bg-gray-800");
+      }
+  
+      // Click events for bottom selector buttons
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const index = parseInt(btn.dataset.index);
+          showImage(index);
+        });
       });
-    });
-  </script>
+  
+      // Click events for side navigation
+      prevBtn.addEventListener("click", () => showImage(currentIndex - 1));
+      nextBtn.addEventListener("click", () => showImage(currentIndex + 1));
+    </script>
+  </section>
 </section>
