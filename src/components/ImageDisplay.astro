@@ -1,0 +1,68 @@
+---
+interface Props {
+  label: string;
+  images: { href: string; label: string }[];
+}
+
+const { label, images } = Astro.props as Props;
+---
+
+<section class="image-carousel max-w-3xl mx-auto my-12">
+  <h2 class="text-2xl font-semibold mb-4">{label}</h2>
+
+  <!-- Image Display -->
+  <div class="relative w-full h-80 overflow-hidden rounded-2xl shadow-lg">
+    {images.map((img, index) => (
+      <img
+        src={img.href}
+        alt={img.label}
+        data-index={index}
+        class={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+          index === 0 ? "opacity-100" : "opacity-0"
+        }`}
+      />
+    ))}
+  </div>
+
+  <!-- Bottom Selector Bar -->
+  <div class="flex mt-4 gap-2">
+    {images.map((_, index) => (
+      <button
+        data-index={index}
+        aria-label={`Select image ${index + 1}`}
+        class={`flex-1 h-2 rounded-full transition-colors duration-300 ${
+          index === 0 ? "bg-gray-800" : "bg-gray-300"
+        }`}
+      />
+    ))}
+  </div>
+
+  <!-- Scoped Script -->
+  <script is:inline>
+    const section = document.currentScript.closest(".image-carousel");
+    const images = section.querySelectorAll("img[data-index]");
+    const buttons = section.querySelectorAll("button[data-index]");
+
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const index = btn.dataset.index;
+
+        images.forEach((img) => {
+          img.classList.remove("opacity-100");
+          img.classList.add("opacity-0");
+        });
+
+        buttons.forEach((b) => {
+          b.classList.remove("bg-gray-800");
+          b.classList.add("bg-gray-300");
+        });
+
+        images[index].classList.remove("opacity-0");
+        images[index].classList.add("opacity-100");
+
+        btn.classList.remove("bg-gray-300");
+        btn.classList.add("bg-gray-800");
+      });
+    });
+  </script>
+</section>
