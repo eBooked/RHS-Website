@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout>
+
+    <h1 class="p-5 text-4xl text-black flex justify-center bg-golden-yellow font-mono">
+        - Team Calendar -
+    </h1>
+
+    <!-- Calendar Wrapper -->
+    <div class="pb-10 pt-5 flex justify-center">
+
+        <!-- Large Screen -->
+        <iframe 
+            src="https://calendar.google.com/calendar/embed?src=c_c69e27e55d8efbccc349de8d204508b0563e8726b6406836af3d14f08b3dc955%40group.calendar.google.com&ctz=America%2FLos_Angeles" 
+            style="border: 0" 
+            width="800" 
+            height="600"
+            class="hidden md:block"
+        />
+
+        <!-- Small Screen -->
+        <iframe 
+            src="https://calendar.google.com/calendar/embed?src=c_c69e27e55d8efbccc349de8d204508b0563e8726b6406836af3d14f08b3dc955%40group.calendar.google.com&ctz=America%2FLos_Angeles" 
+            style="border: 0" 
+            width="400" 
+            height="600"
+            class="block md:hidden w-full"
+        />
+
+    </div>
+</Layout>

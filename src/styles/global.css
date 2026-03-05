@@ -10,26 +10,37 @@
   --color-dark-green: #033602;
   --color-golden-yellow: #facc15;
 
-  /* Other colors */
-  --color-dark-gray: #18212F;
+  /* Neutral grayscale scale for light mode (0 = lightest, 1000 = darkest) */
+  --color-light-0: #ffffff;      /* page background */
+  --color-light-100: #f9fafb;    /* very light surfaces (cards, subtle sections) */
+  --color-light-200: #f3f4f6;    /* nav / footer / raised surfaces */
+  --color-light-300: #e5e7eb;    /* borders & strong dividers */
+  --color-light-400: #d1d5db;    /* heavy borders / subtle outlines */
+  --color-light-500: #9ca3af;    /* disabled / subtle lines */
+  --color-light-600: #6b7280;    /* muted text */
+  --color-light-700: #4b5563;    /* secondary body text */
+  --color-light-800: #374151;    /* strong body text */
+  --color-light-900: #111827;    /* headings */
+  --color-light-1000: #020617;   /* highest contrast accents on light */
 
-  /* Light mode colors – edit here to change the whole light theme */
-  --color-lm-bg: #ffffff;              /* page / section background */
-  --color-lm-dark-gray: #f3f4f6;      /* gray-100: footer, mobile menu, button bg */
-  --color-lm-light-gray: #f9fafb;     /* gray-50: nav, cards */
-  --color-lm-highlight-gray: #e5e7eb; /* gray-200: hover, card borders */
-  --color-lm-border: #d1d5db;         /* gray-300: footer border */
-  --color-lm-text: #111827;           /* gray-900: primary text / headings */
-  --color-lm-text-muted: #6b7280;     /* gray-500: secondary text */
-  --color-lm-text-muted-alt: #4b5563;  /* gray-600: body copy, icons */
+  /* Extra legacy light grays kept for future use (not currently referenced) */
+  --color-light-extra-700: #5b6474;
+  --color-light-extra-800: #4b5563;
+  --color-light-extra-900: #1f2937;
+  --color-light-extra-1000: #111827;
 
-  /* Dark mode colors. Less colors overall due to annoying tailwind restrictions :( */
-  --color-dm-dark-gray: #0f1115;      /* main page background */
-  --color-dm-mid-gray: #151821;       /* In between gray shade */
-  --color-dm-light-gray: #1a1f28;     /* cards/nav/surfaces */
-  --color-dm-highlight-gray: #262c38;  /* hover/raised/sections */
-  --color-dm-text: #e6e9ef;           /* primary text */
-  --color-dm-text-muted: #9aa3b2;     /* secondary text */
+  /* Neutral grayscale scale for dark mode (0 = lightest, 1000 = darkest) */
+  --color-dark-0: #e6e9ef;       /* primary text */
+  --color-dark-100: #9aa3b2;     /* muted text */
+  --color-dark-200: #c4c9d4;     /* slightly dimmed text */
+  --color-dark-300: #b0b7c5;     /* mid text tone */
+  --color-dark-400: #262c38;     /* hover / raised sections */
+  --color-dark-500: #202632;     /* between hover and surfaces */
+  --color-dark-600: #1a1f28;     /* cards / nav / general surfaces */
+  --color-dark-700: #171b23;     /* deeper surfaces transition */
+  --color-dark-800: #151821;     /* deeper surfaces */
+  --color-dark-900: #11131a;     /* near-background */
+  --color-dark-1000: #0f1115;    /* main page background */
 }
 
 /* UNIVERSAL VARIABLES */

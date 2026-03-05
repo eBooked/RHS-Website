@@ -17,12 +17,12 @@ const { person, title, image } = Astro.props as Props;
         <img 
             src= {image}; 
             alt= {person}; 
-            class="flex w-[20vh] h-[20vh] md:w-[20vh] md:h-[20vh] object-cover object-center p-2 md:p-4 bg-lm-dark-gray dark:bg-dm-light-gray"
+            class="flex w-[20vh] h-[20vh] md:w-[20vh] md:h-[20vh] object-cover object-center p-2 md:p-4 bg-light-200 dark:bg-dark-600"
         />
     </div>
     <!-- Title of person -->
     <div class="flex justify-center p-1">
-        <h1 class="inline-block whitespace-nowrap font-bold font-mono text-lg px-2 bg-lm-dark-gray dark:bg-dm-mid-gray">
+        <h1 class="inline-block whitespace-nowrap font-bold font-mono text-lg px-2 bg-light-200 dark:bg-dark-800">
             {title}
         </h1>
     </div>
