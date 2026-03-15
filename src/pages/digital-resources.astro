@@ -1,7 +1,236 @@
 ---
 import Layout from '../layouts/Layout.astro';
 ---
+<!-- On links inside this page, you may see target=_blank and rel=... Those just open a new tab and prevents re-redirection. You can look
+ them up too if you'd like more info, but nothing really that important -->
 
 <Layout>
-    silly
+    <!-- Wrapper -->
+    <div class="py-5 bg-light-200 dark:bg-dark-600">
+        <!-- Title -->
+        <div class="py-4 max-w-6xl mx-auto px-5 lg:px-8 bg-golden-yellow dark:bg-golden-yellow">
+            <h1 class="text-3xl md:text-4xl font-semibold text-black font-mono">Digital Resources</h1>
+        </div>
+
+        <!-- Content box: styled for light/dark, contains all info -->
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div
+                class="rounded-xl border-2 bg-light-0 dark:bg-dark-500 border-light-300 dark:border-dark-400 shadow-md dark:shadow-none 
+                text-light-1000 dark:text-dark-0 transition-colors duration-200"
+            >
+                <div class="p-6 sm:p-8 md:p-10">
+                    <!-- Resource type desc -->
+                    <h2 class="text-xl md:text-2xl font-medium font-mono mb-6 text-light-1000 dark:text-dark-0">
+                        Team Resources:
+                    </h2>
+
+                    <!-- Description -->
+                    <h2 class="text-md font-medium font-mono mb-6 text-light-1000/80 dark:text-dark-0/80">
+                        Various online resources available to everyone if needed.
+                    </h2>
+
+                    <!-- Resource Links -->
+                    <ul class="px-5 list-disc space-y-3">
+                        <li>
+                            <a href="/calendar" class="font-mono text-light-700 dark:text-dark-200 hover:text-light-1000 dark:hover:text-dark-0 hover:underline transition-colors">Calendar</a>
+                        </li>
+                        <li>
+                            <a href="/discord" class="font-mono text-light-700 dark:text-dark-200 hover:text-light-1000 dark:hover:text-dark-0 hover:underline transition-colors">Discord</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/IronRiders" target="_blank" rel="noopener noreferrer" class="font-mono text-light-700 dark:text-dark-200 hover:text-light-1000 dark:hover:text-dark-0 hover:underline transition-colors">GitHub</a>
+                        </li>
+                        <li>
+                            <a href="http://ironriders.org/drive" target="_blank" rel="noopener noreferrer" class="font-mono text-light-700 dark:text-dark-200 hover:text-light-1000 dark:hover:text-dark-0 hover:underline transition-colors">Google Drive</a>
+                         </li>
+                         <li>
+                             <a href="http://ironriders.org/first-registration" target="_blank" rel="noopener noreferrer" class="font-mono text-light-700 dark:text-dark-200 hover:text-light-1000 dark:hover:text-dark-0 hover:underline transition-colors">FIRST Registration</a>
+                         </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content box: styled for light/dark, contains all info -->
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div 
+                class="rounded-xl border-2 bg-light-0 dark:bg-dark-500 border-light-300 dark:border-dark-400 shadow-md dark:shadow-none 
+                text-light-1000 dark:text-dark-0 transition-colors duration-200"
+            >
+
+                <div class="p-6 sm:p-8 md:p-10">
+                    <!-- Resource type desc -->
+                    <h2 class="text-xl md:text-2xl font-medium font-mono mb-6 text-light-1000 dark:text-dark-0">
+                        Locations:
+                    </h2>
+
+                    <!-- Description -->
+                    <h2 class="text-md font-medium font-mono mb-6 text-light-1000/80 dark:text-dark-0/80">
+                        Some team activites take place away from Roosevelt.
+                    </h2>
+
+                    <!-- Resource Links -->
+                    <ul class="px-5 list-disc space-y-3">
+                        <li>
+                            <a href="https://goo.gl/maps/wNwVpygLLDcTwmYi9" target="_blank" rel="noopener noreferrer" class="font-mono text-light-700 dark:text-dark-200 hover:text-light-1000 dark:hover:text-dark-0 hover:underline transition-colors">North End FRC Practice Field (hosted by teams 1778 and 2522)</a>
+                            <br />
+                            <span class="font-mono text-light-600 dark:text-dark-100 text-sm">20000 28th Ave W<br />Lynnwood, WA 98036</span>
+                        </li>
+                        <li>
+                            <a href="https://goo.gl/maps/pEoQ7txVQcGk94C59" target="_blank" rel="noopener noreferrer" class="font-mono text-light-700 dark:text-dark-200 hover:text-light-1000 dark:hover:text-dark-0 hover:underline transition-colors">Auburn High School</a>
+                            <br />
+                            <span class="font-mono text-light-600 dark:text-dark-100 text-sm">711 E Main St<br />Auburn, WA 98002</span><br />
+                            <span class="text-sm text-light-500 dark:text-dark-300 font-mono">(Competition Event Location)</span>
+                        </li>
+                        <li>
+                            <a href="https://share.google/AmgBCQDRcZC57iihC" target="_blank" rel="noopener noreferrer" class="font-mono text-light-700 dark:text-dark-200 hover:text-light-1000 dark:hover:text-dark-0 hover:underline transition-colors">Bonney Lake High School</a>
+                            <br />
+                            <span class="font-mono text-light-600 dark:text-dark-100 text-sm">10920 199th Ave Ct E<br />Bonney Lake, WA 98391</span><br />
+                            <span class="text-sm text-light-500 dark:text-dark-300 font-mono">(Competition Event Location)</span>
+                        </li>
+                        <li>
+                            <a href="https://share.google/6AlTR8pJP9aEoMAk6" target="_blank" rel="noopener noreferrer" class="font-mono text-light-700 dark:text-dark-200 hover:text-light-1000 dark:hover:text-dark-0 hover:underline transition-colors">Glacier Peak High School</a>
+                            <br />
+                            <span class="font-mono text-light-600 dark:text-dark-100 text-sm">7401 144th Pl SE<br />Snohomish, WA 98296</span><br />
+                            <span class="text-sm text-light-500 dark:text-dark-300 font-mono">(Competition Event Location)</span>
+                        </li>
+                        <li>
+                            <a href="https://goo.gl/maps/ejzSvuBM6XmvsdMC7" target="_blank" rel="noopener noreferrer" class="font-mono text-light-700 dark:text-dark-200 hover:text-light-1000 dark:hover:text-dark-0 hover:underline transition-colors">Sammamish High School</a>
+                            <br />
+                            <span class="font-mono text-light-600 dark:text-dark-100 text-sm">100 140th Ave SE<br />Bellevue, WA 98005</span><br />
+                            <span class="text-sm text-light-500 dark:text-dark-300 font-mono">(Competition Event Location)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content box: styled for light/dark, contains all info -->
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div
+                class="rounded-xl border-2 bg-light-0 dark:bg-dark-500 border-light-300 dark:border-dark-400 shadow-md dark:shadow-none 
+                text-light-1000 dark:text-dark-0 transition-colors duration-200"
+            >
+                <div class="p-6 sm:p-8 md:p-10">
+                    <!-- Resource type desc -->
+                    <h2 class="text-xl md:text-2xl font-medium font-mono mb-6 text-light-1000 dark:text-dark-0">
+                        Email Addresses:
+                    </h2>
+
+                    <!-- Description -->
+                    <h2 class="text-md font-medium font-mono mb-6 text-light-1000/80 dark:text-dark-0/80">
+                        Our leadership and coach are always willing to answer any questions you have. These listed e-mails will connect you
+                        to the various directors and the coach our team has. Each director works on different parts of the club so to get a
+                        quicker and/or more accurate response, have an idea of which director will be appropriate for your question. If
+                        you're unsure e-mail either the Operations or Technical executives.
+                    </h2>
+
+                    <!-- Resource Links, structured differently -->
+                    <div class="px-5 flex flex-col space-y-6">
+                        <div>
+                            <!-- Coaches -->
+                            <h3 class="text-lg font-medium font-mono text-light-1000 dark:text-dark-0 mb-3">Coaches:</h3>
+                            <ul class="px-5 space-y-2 font-mono text-light-700 dark:text-dark-200">
+                                <li>
+                                    <a href="mailto:coaches@ironriders.org" class="text-light-700 dark:text-dark-200 hover:text-light-1000 dark:hover:text-dark-0 hover:underline transition-colors">coaches@ironriders.org</a>
+                                </li>
+                                <li>John Luetke: <a href="mailto:john@ironriders.org" class="text-light-700 dark:text-dark-200 hover:text-light-1000 dark:hover:text-dark-0 hover:underline transition-colors">john@ironriders.org</a></li>
+                                <li>Andrew Meador: <a href="mailto:ammeador@seattleschools.org" class="text-light-700 dark:text-dark-200 hover:text-light-1000 dark:hover:text-dark-0 hover:underline transition-colors">ammeador@seattleschools.org</a></li>
+                                <li>Kailee Atkinson: <a href="mailto:kbatkinson@seattleschools.org" class="text-light-700 dark:text-dark-200 hover:text-light-1000 dark:hover:text-dark-0 hover:underline transition-colors">kbatkinson@seattleschools.org</a></li>
+                            </ul>
+
+                            <!-- Student Leadership -->
+                            <h3 class="font-bold text-lg font-medium font-mono text-light-1000 dark:text-dark-0 mt-6 mb-3">Student Leadership:</h3>
+                            <ul class="px-5 space-y-2 font-mono text-light-700 dark:text-dark-200">
+                                <li>
+                                    <a href="mailto:studentleaders@ironriders.org" class="text-light-700 dark:text-dark-200 hover:text-light-1000 dark:hover:text-dark-0 hover:underline transition-colors">studentleaders@ironriders.org</a>
+                                </li>
+                                <li>Operations Executive/Captain: <a href="mailto:operations@ironriders.org" class="text-light-700 dark:text-dark-200 hover:text-light-1000 dark:hover:text-dark-0 hover:underline transition-colors">operations@ironriders.org</a></li>
+                                <li>Technical Executive/Captain: <a href="mailto:technical@ironriders.org" class="text-light-700 dark:text-dark-200 hover:text-light-1000 dark:hover:text-dark-0 hover:underline transition-colors">technical@ironriders.org</a></li>
+                                <li>Communications Director: <a href="mailto:communications@ironriders.org" class="text-light-700 dark:text-dark-200 hover:text-light-1000 dark:hover:text-dark-0 hover:underline transition-colors">communications@ironriders.org</a></li>
+                                <li>Engineering Director: <a href="mailto:engineering@ironriders.org" class="text-light-700 dark:text-dark-200 hover:text-light-1000 dark:hover:text-dark-0 hover:underline transition-colors">engineering@ironriders.org</a></li>
+                                <li>Controls Director: <a href="mailto:controls@ironriders.org" class="text-light-700 dark:text-dark-200 hover:text-light-1000 dark:hover:text-dark-0 hover:underline transition-colors">controls@ironriders.org</a></li>
+                                <li>Business/Finance Director: <a href="mailto:business@ironriders.org" class="text-light-700 dark:text-dark-200 hover:text-light-1000 dark:hover:text-dark-0 hover:underline transition-colors">business@ironriders.org</a></li>
+                                <li>Strategy Director: <a href="mailto:strategy@ironriders.org" class="text-light-700 dark:text-dark-200 hover:text-light-1000 dark:hover:text-dark-0 hover:underline transition-colors">strategy@ironriders.org</a></li>
+                                <li>Outreach Director: <a href="mailto:outreach@ironriders.org" class="text-light-700 dark:text-dark-200 hover:text-light-1000 dark:hover:text-dark-0 hover:underline transition-colors">outreach@ironriders.org</a></li>
+                            </ul>
+                        </div>     
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content box: styled for light/dark, contains all info -->
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div 
+                class="rounded-xl border-2 bg-light-0 dark:bg-dark-500 border-light-300 dark:border-dark-400 shadow-md dark:shadow-none 
+                text-light-1000 dark:text-dark-0 transition-colors duration-200"
+            >
+
+                <div class="p-6 sm:p-8 md:p-10">
+                    <!-- Resource type desc -->
+                    <h2 class="text-xl md:text-2xl font-medium font-mono mb-6 text-light-1000 dark:text-dark-0">
+                        Paperwork:
+                    </h2>
+
+                    <!-- Description -->
+                    <h2 class="text-md font-medium font-mono mb-6 text-light-1000/80 dark:text-dark-0/80">
+                        Throughout the year students will have to fill out certain forms in order to participate on the team. While these 
+                        will be sent to out as necessary to those on the email list, if you need to fill out a form and don't have it they 
+                        will be listed below.
+                    </h2>
+
+                    <!-- Resource Links -->
+                    <ul class="px-5 list-disc space-y-3">
+                        <li>
+                            <a href="https://ironriders.org/wp-content/uploads/2018/02/Iron-Riders-Emergency-Medical-Info-Sheet.doc" target="_blank" rel="noopener noreferrer" class="font-mono font-bold text-light-700 dark:text-dark-200 hover:text-light-1000 dark:hover:text-dark-0 hover:underline transition-colors">
+                            Emergency Medical Information</a>
+                        </li>
+                        <li>
+                            <a href="https://www.firstinspires.org/sites/default/files/uploads/resource_library/youth-registration-guide-v3.pdf" target="_blank" rel="noopener noreferrer" class="font-mono font-bold text-light-700 dark:text-dark-200 hover:text-light-1000 dark:hover:text-dark-0 hover:underline transition-colors">
+                            FIRST Youth Paperwork</a>
+                        </li>
+                        <li>
+                            <a href="https://ironriders.org/wp-content/uploads/2018/02/Copy-of-Student-Transportation-Agreement-FIRST.pdf" target="_blank" rel="noopener noreferrer" class="font-mono font-bold text-light-700 dark:text-dark-200 hover:text-light-1000 dark:hover:text-dark-0 hover:underline transition-colors">
+                            Student Transportation Agreement</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content box: styled for light/dark, contains all info -->
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div 
+                class="rounded-xl border-2 bg-light-0 dark:bg-dark-500 border-light-300 dark:border-dark-400 shadow-md dark:shadow-none 
+                text-light-1000 dark:text-dark-0 transition-colors duration-200"
+            >
+
+                <div class="p-6 sm:p-8 md:p-10">
+                    <!-- Resource type desc -->
+                    <h2 class="text-xl md:text-2xl font-medium font-mono mb-6 text-light-1000 dark:text-dark-0">
+                        Team Links:
+                    </h2>
+
+                    <!-- Description -->
+                    <h2 class="text-md font-medium font-mono mb-6 text-light-1000/80 dark:text-dark-0/80">
+                        For students apart of the team.
+                    </h2>
+
+                    <!-- Resource Links -->
+                    <ul class="px-5 list-disc space-y-3">
+                        <li>
+                            <a href="https://ironriders.org/purchase-request" target="_blank" rel="noopener noreferrer" class="font-mono text-light-700 dark:text-dark-200 hover:text-light-1000 dark:hover:text-dark-0 hover:underline transition-colors">
+                            Purchase Request</a>
+                        </li>
+                        <li>
+                            <a href="https://inventory.ironriders.org/" target="_blank" rel="noopener noreferrer" class="font-mono text-light-700 dark:text-dark-200 hover:text-light-1000 dark:hover:text-dark-0 hover:underline transition-colors">
+                            Shop Inventory</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </Layout>
