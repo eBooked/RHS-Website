@@ -1,16 +1,26 @@
 ---
 const discordInviteUrl = 'https://discord.com/invite/EzR3VyUQvF';
+const homeUrl = '/';
 ---
+<!-- Opens Discord in a new tab on click, then redirects this page to home -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="refresh" content={`0;url=${discordInviteUrl}`} />
     <title>Join our Discord – Iron Riders</title>
     <link rel="canonical" href={discordInviteUrl} />
   </head>
   <body>
-    <p>Redirecting to Discord… <a href={discordInviteUrl}>Click here if you're not redirected.</a></p>
+    <p>You are about to be redirected to Discord. Click here to continue.</p>
+    <a href={discordInviteUrl} target="_blank" rel="noopener noreferrer" id="discord-link" style="display:inline-block;margin:1rem 0;padding:0.75rem 1.5rem;background:#5865F2;color:white;text-decoration:none;border-radius:8px;font-weight:600;">Join Discord</a>
+    <script is:inline define:vars={{ discordInviteUrl, homeUrl }}>
+      document.getElementById('discord-link').addEventListener('click', function(e) {
+        window.open(discordInviteUrl, '_blank');
+        e.preventDefault();
+        setTimeout(function() { window.location.href = homeUrl; }, 300);
+        return false;
+      });
+    </script>
   </body>
 </html>

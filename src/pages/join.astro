@@ -1,24 +1,28 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import StandardBox from '../layouts/StandardBox.astro';
+
+import Title from "../components/Title.astro";
 ---
 
 <Layout>
     <!-- Wrapper for formatting-->
-	<div class="py-5 bg-light-200 dark:bg-dark-400">
+	<div class="py-5">
 
 		<!-- Title -->
-		<div class="py-4 max-w-6xl mx-auto px-5 lg:px-8 bg-golden-yellow">
-			<h1 class="text-3xl md:text-4xl font-semibold text-black font-mono">Join RHS Robotics!</h1>
-		</div>
-	
+		<Title
+			title="Join RHS Robotics!"
+		/>
+
 		<!-- Wrapper  -->
-		<section class="py-6 md:py-8">
+		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
 	
-			<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-	
+			<StandardBox>
 				<!-- Why Join Section -->
 				<div class="flex flex-col items-center py-12 px-8">
+					<!-- Mini title -->
 					<h2 class="text-2xl font-bold font-mono mb-8">Why Join?</h2>
+
 					<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl w-full">
 			
 						<!-- Card 1 -->
@@ -46,18 +50,18 @@ import Layout from '../layouts/Layout.astro';
 						</div>
 					</div>
 				</div>
+			</StandardBox>
 
-			</div>
+			<!-- Standard Box Design -->
+			<StandardBox>
+				<h1 class="px-10 pt-10 text-3xl md:text-4xl font-semibold text-white font-mono">What to do to Join?</h1>
 
-			<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center py-12 px-8">
-				<h1 class="text-3xl md:text-4xl font-semibold text-white font-mono">What to do to Join?</h1>
-
-				<p class="py-6 font-mono text-lg text-gray-700 dark:text-gray-400">
+				<p class="px-10 py-10 font-mono text-lg text-gray-700 dark:text-gray-400">
 					If you are interested in joining, there's mutliple ways to join--and don't worry, there's no forms or anything--just join the discord
 					or get in contact with one of our leaders! They will help you in the easy process, and then you can attend meetings and join a specific group
 					that works on the robot or helps the program.
 				</p>
-			</div>
-		</section>
+			</StandardBox>
+		</div>
 	</div>
 </Layout>

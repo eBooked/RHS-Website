@@ -1,5 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import StandardBox from '../layouts/StandardBox.astro';
+
+import Title from '../components/Title.astro';
 
 /*Imports a component, leadershipbox and mentorbox. So styling is a bit easier, as each one connects back to the component*/
 import LeadershipBox from '../components/LeadershipBox.astro';
@@ -8,17 +11,16 @@ import MentorBox from '../components/MentorBox.astro';
 ---
 <Layout>
 	<!-- Wrapper for department section -->
-	<div class="py-5 bg-light-200 dark:bg-dark-400">
+	<div class="py-5">
 
 		<!-- Title -->
-		<div class="py-4 max-w-6xl mx-auto px-5 lg:px-8 bg-golden-yellow bg-golden-yellow">
-			<h1 class="text-3xl md:text-4xl font-semibold text-black font-mono ">Our Team - Departments</h1>
-		</div>
+		<Title
+			title="Our Team - Departments"
+		/>
 	
 		<!-- Engineering Section -->
-		<section class="py-6 md:py-8">
-	
-			<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+		<StandardBox>
+			<div class="pt-5 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 				<h2 class="text-xl md:text-2xl font-medium text-light-1000 dark:text-dark-0 font-mono mb-6">
 					Engineering Department
 				</h2>
@@ -42,12 +44,11 @@ import MentorBox from '../components/MentorBox.astro';
 					class="w-[40vh] h-[40vh] md:w-[50vh] md:h-[50vh] object-cover object-top p-4 bg-light-300 dark:bg-dark-600"
 				/>
 			</div>
-		</section>
+		</StandardBox>
 	
 		<!-- Software Section -->
-		<section class="py-6 md:py-8">
-	
-			<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+		<StandardBox>
+			<div class="pt-5 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 				<h2 class="text-xl md:text-2xl font-medium text-light-1000 dark:text-dark-0 font-mono mb-6">
 					Software Department
 				</h2>
@@ -69,12 +70,11 @@ import MentorBox from '../components/MentorBox.astro';
 					class="w-[40vh] h-[40vh] md:w-[50vh] md:h-[50vh] object-cover object-top p-4 bg-light-300 dark:bg-dark-600"
 				/>
 			</div>
-		</section>
+		</StandardBox>
 	
 		<!-- Business Section -->
-		<section class="flex-col py-6 md:py-8">
-	
-			<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+		<StandardBox>
+			<div class="pt-5 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 				<h2 class="text-xl md:text-2xl font-medium text-light-1000 dark:text-dark-0 font-mono mb-6">
 					Business Department
 				</h2>
@@ -96,12 +96,11 @@ import MentorBox from '../components/MentorBox.astro';
 					class="w-[40vh] h-[40vh] md:w-[50vh] md:h-[50vh] object-cover object-top p-4 bg-light-300 dark:bg-dark-600"
 				/>
 			</div>
-		</section>
+		</StandardBox>
 	
 		<!-- Strategy Section -->
-		<section class="py-6 md:py-8">
-	
-			<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+		<StandardBox>
+			<div class="pt-5 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 				<h2 class="text-xl md:text-2xl font-medium text-light-1000 dark:text-dark-0 font-mono mb-6">
 					Strategy Department
 				</h2>
@@ -122,113 +121,115 @@ import MentorBox from '../components/MentorBox.astro';
 					class="w-[40vh] h-[40vh] md:w-[50vh] md:h-[50vh] object-cover object-top p-4 bg-light-300 dark:bg-dark-600"
 				/>
 			</div>
-		</section>
+		</StandardBox>
 	</div>
 
 	<!-- Wrapper for leadership section -->
-	<div class="py-10 bg-light-200 dark:bg-dark-600">
+	<div class="py-5 bg-light-200 dark:bg-dark-600">
+		<!-- Title -->
+		<Title
+			title="Our Team - Leadership"
+		/>
 		
-		<!-- Title + Desc -->
-		<div class="py-5 md:py-8 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-			<!-- Title -->
-			<h1 class="text-3xl md:text-4xl font-bold text-light-1000 dark:text-dark-0 font-mono mb-6">Our Team - Leadership</h1>
-
-			<!-- Desc -->
+		<!-- Desc -->
+		<div class="py-5 md:py-6 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 			<p class="text-light-800 dark:text-dark-100 text-lg max-w-4xl leading-relaxed">
 				Big shoutout to all of our incredible student leaders who spend countless hours to our team! 
 			</p>
 		</div>
 
-		
-	
-		<!-- Flex-col of leadership! -->
-		<div class="flex-col flex gap-10 justify-center py-15">
-			<!-- Top leadership -->
-			<div class="flex flex-col lg:flex-row justify-center items-center lg:space-x-30">
-				<LeadershipBox
-					person="Anna Lai";
-					title="Operations Executive";
-					image="../assets/2025-2026/LeadershipPhotos/COO.JPG"
-				/>
+		<StandardBox>
+			<!-- Flex-col of leadership! -->
+			<div class="flex-col flex gap-10 justify-center py-15">
+				<!-- Top leadership -->
+				<div class="flex flex-col lg:flex-row justify-center items-center lg:space-x-30">
+					<LeadershipBox
+						person="Anna Lai";
+						title="Operations Executive";
+						image="../assets/2025-2026/LeadershipPhotos/COO.JPG"
+					/>
 
-				<LeadershipBox
-					person="Kaylee Shin";
-					title="Technical Executive";
-					image="../assets/2025-2026/LeadershipPhotos/CTO.JPG"
-				/>				
+					<LeadershipBox
+						person="Kaylee Shin";
+						title="Technical Executive";
+						image="../assets/2025-2026/LeadershipPhotos/CTO.JPG"
+					/>				
+				</div>
+
+				<!-- Secondary leadership P1-->
+				<div class="flex flex-col lg:flex-row justify-center items-center lg:space-x-30">
+					<LeadershipBox
+						person="Andrew Day";
+						title="Build Director";
+						image="../assets/2025-2026/LeadershipPhotos/Build Director.JPG"
+					/>
+
+					<LeadershipBox
+						person="William Wagner";
+						title="Design Director";
+						image="../assets/2025-2026/LeadershipPhotos/Design Director.JPG"
+					/>	
+
+					<LeadershipBox
+						person="Ryan Elbert";
+						title="Controls Director";
+						image="../assets/2025-2026/LeadershipPhotos/Software Director.JPG"
+					/>			
+				</div>
+				<!-- Secondary leadership P2-->
+				<div class="flex flex-col lg:flex-row justify-center items-center lg:space-x-30">
+					<LeadershipBox
+						person="Lynn Anderson";
+						title="Communications Director";
+						image="../assets/2025-2026/LeadershipPhotos/Communications Director.JPG"
+					/>
+
+					<LeadershipBox
+						person="Kira Outhred";
+						title="Strategy Director";
+						image="../assets/2025-2026/LeadershipPhotos/Strategy Director.JPG"
+					/>	
+
+					<LeadershipBox
+						person="Lalitha Muralidhar";
+						title="Finance Director";
+						image="../assets/2025-2026/LeadershipPhotos/Finance Director.JPG"
+					/>			
+				</div>
+				<!-- Secondary leadership P3-->
+				<div class="flex flex-col lg:flex-row justify-center items-center lg:space-x-30">
+					<LeadershipBox
+						person="Rio Johnson";
+						title="Marketing Director";
+						image="../assets/2025-2026/LeadershipPhotos/Marketing Director.JPG"
+					/>
+
+					<LeadershipBox
+						person="Zoe Bates";
+						title="Outreach Director";
+						image="../assets/2025-2026/LeadershipPhotos/Outreach Director.JPG"
+					/>	
+				</div>
 			</div>
-
-			<!-- Secondary leadership P1-->
-			<div class="flex flex-col lg:flex-row justify-center items-center lg:space-x-30">
-				<LeadershipBox
-					person="Andrew Day";
-					title="Build Director";
-					image="../assets/2025-2026/LeadershipPhotos/Build Director.JPG"
-				/>
-
-				<LeadershipBox
-					person="William Wagner";
-					title="Design Director";
-					image="../assets/2025-2026/LeadershipPhotos/Design Director.JPG"
-				/>	
-
-				<LeadershipBox
-					person="Ryan Elbert";
-					title="Controls Director";
-					image="../assets/2025-2026/LeadershipPhotos/Software Director.JPG"
-				/>			
-			</div>
-			<!-- Secondary leadership P2-->
-			<div class="flex flex-col lg:flex-row justify-center items-center lg:space-x-30">
-				<LeadershipBox
-					person="Lynn Anderson";
-					title="Communications Director";
-					image="../assets/2025-2026/LeadershipPhotos/Communications Director.JPG"
-				/>
-
-				<LeadershipBox
-					person="Kira Outhred";
-					title="Strategy Director";
-					image="../assets/2025-2026/LeadershipPhotos/Strategy Director.JPG"
-				/>	
-
-				<LeadershipBox
-					person="Lalitha Muralidhar";
-					title="Finance Director";
-					image="../assets/2025-2026/LeadershipPhotos/Finance Director.JPG"
-				/>			
-			</div>
-			<!-- Secondary leadership P3-->
-			<div class="flex flex-col lg:flex-row justify-center items-center lg:space-x-30">
-				<LeadershipBox
-					person="Rio Johnson";
-					title="Marketing Director";
-					image="../assets/2025-2026/LeadershipPhotos/Marketing Director.JPG"
-				/>
-
-				<LeadershipBox
-					person="Zoe Bates";
-					title="Outreach Director";
-					image="../assets/2025-2026/LeadershipPhotos/Outreach Director.JPG"
-				/>	
-			</div>
-		</div>
+		</StandardBox>
 	</div>
 
-	<!-- Wrapper for leadership section -->
-	<div class="py-10 bg-light-200 dark:bg-dark-400">
-		
-		<!-- Title + Desc -->
-		<div class="py-5 md:py-8 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-			<!-- Title -->
-			<h1 class="text-3xl md:text-4xl font-bold text-light-1000 dark:text-dark-0 font-mono mb-6">Our Team - Mentors</h1>
+	<!-- Wrapper for mentor section -->
+	<div class="py-5">
+		<!-- Title -->
+		<Title
+			title="Our Team - Mentors"
+		/>
 
-			<!-- Desc -->
+		<!-- Desc -->
+		<div class="py-5 md:py-6 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 			<p class="text-light-800 dark:text-dark-100 text-lg max-w-4xl leading-relaxed">
-				The following is a list of all of our incredible mentors who help us throughout the year!
+				The following is a list of all of our incredible mentors who help us throughout the year! Unfortunately, we do not have photos,
+				so instead you will have to look at our beautiful logo!
 			</p>
 		</div>
 
+		<StandardBox>
 		<!-- Flex-col of mentors! -->
 		<div class="flex-col flex gap-10 justify-center py-15">
 
@@ -297,5 +298,6 @@ import MentorBox from '../components/MentorBox.astro';
 				/>	
 			</div>
 		</div>
+	</StandardBox>
 	</div>
 </Layout>

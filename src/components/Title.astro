@@ -1,0 +1,14 @@
+---
+import type { string } from 'astro:schema';
+
+interface Props {
+  title: string;
+}
+
+const {title} = Astro.props as Props;
+
+//This is just a title component so it's easier to edit all of them.
+---
+<div class="py-4 max-w-6xl mx-auto px-5 lg:px-8 bg-golden-yellow dark:bg-golden-yellow">
+    <h1 class="text-3xl md:text-4xl font-semibold text-black font-mono">{title}</h1>
+</div>

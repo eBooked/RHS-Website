@@ -1,5 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import StandardBox from '../layouts/StandardBox.astro'
+
+import Title from "../components/Title.astro";
 ---
 <!-- On links inside this page, you may see target=_blank and rel=... Those just open a new tab and prevents re-redirection. You can look
  them up too if you'd like more info, but nothing really that important -->
@@ -8,29 +11,24 @@ import Layout from '../layouts/Layout.astro';
     <!-- Wrapper -->
     <div class="py-5 bg-light-200 dark:bg-dark-600">
         <!-- Title -->
-        <div class="py-4 max-w-6xl mx-auto px-5 lg:px-8 bg-golden-yellow dark:bg-golden-yellow">
-            <h1 class="text-3xl md:text-4xl font-semibold text-black font-mono">Digital Resources</h1>
-        </div>
+        <Title
+            title="Digital Resources"
+        />
 
-        <!-- Content box: styled for light/dark, contains all info -->
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-            <div
-                class="rounded-xl border-2 bg-light-0 dark:bg-dark-500 border-light-300 dark:border-dark-400 shadow-md dark:shadow-none 
-                text-light-1000 dark:text-dark-0 transition-colors duration-200"
-            >
-                <div class="p-6 sm:p-8 md:p-10">
-                    <!-- Resource type desc -->
-                    <h2 class="text-xl md:text-2xl font-medium font-mono mb-6 text-light-1000 dark:text-dark-0">
-                        Team Resources:
-                    </h2>
+        <StandardBox>
+            <div class="px-6 sm:px-8 md:px-10">
+                <!-- Resource type desc -->
+                <h2 class="text-xl md:text-2xl font-medium font-mono mb-6 text-light-1000 dark:text-dark-0">
+                    Team Resources:
+                </h2>
 
-                    <!-- Description -->
-                    <h2 class="text-md font-medium font-mono mb-6 text-light-1000/80 dark:text-dark-0/80">
-                        Various online resources available to everyone if needed.
-                    </h2>
+                <!-- Description -->
+                <h2 class="text-md font-medium font-mono mb-6 text-light-1000/80 dark:text-dark-0/80">
+                    Various online resources available to everyone if needed.
+                 </h2>
 
-                    <!-- Resource Links -->
-                    <ul class="px-5 list-disc space-y-3">
+                <!-- Resource Links -->
+                <ul class="px-5 list-disc space-y-3">
                         <li>
                             <a href="/calendar" class="font-mono text-light-700 dark:text-dark-200 hover:text-light-1000 dark:hover:text-dark-0 hover:underline transition-colors">Calendar</a>
                         </li>
@@ -46,31 +44,24 @@ import Layout from '../layouts/Layout.astro';
                          <li>
                              <a href="http://ironriders.org/first-registration" target="_blank" rel="noopener noreferrer" class="font-mono text-light-700 dark:text-dark-200 hover:text-light-1000 dark:hover:text-dark-0 hover:underline transition-colors">FIRST Registration</a>
                          </li>
-                    </ul>
-                </div>
+                </ul>
             </div>
-        </div>
+        </StandardBox>
 
-        <!-- Content box: styled for light/dark, contains all info -->
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-            <div 
-                class="rounded-xl border-2 bg-light-0 dark:bg-dark-500 border-light-300 dark:border-dark-400 shadow-md dark:shadow-none 
-                text-light-1000 dark:text-dark-0 transition-colors duration-200"
-            >
+        <StandardBox>
+            <div class="px-6 sm:px-8 md:px-10">
+                <!-- Resource type desc -->
+                <h2 class="text-xl md:text-2xl font-medium font-mono mb-6 text-light-1000 dark:text-dark-0">
+                    Locations:
+                </h2>
 
-                <div class="p-6 sm:p-8 md:p-10">
-                    <!-- Resource type desc -->
-                    <h2 class="text-xl md:text-2xl font-medium font-mono mb-6 text-light-1000 dark:text-dark-0">
-                        Locations:
-                    </h2>
+                <!-- Description -->
+                <h2 class="text-md font-medium font-mono mb-6 text-light-1000/80 dark:text-dark-0/80">
+                    Some team activites take place away from Roosevelt.
+                </h2>
 
-                    <!-- Description -->
-                    <h2 class="text-md font-medium font-mono mb-6 text-light-1000/80 dark:text-dark-0/80">
-                        Some team activites take place away from Roosevelt.
-                    </h2>
-
-                    <!-- Resource Links -->
-                    <ul class="px-5 list-disc space-y-3">
+                <!-- Resource Links -->
+                <ul class="px-5 list-disc space-y-3">
                         <li>
                             <a href="https://goo.gl/maps/wNwVpygLLDcTwmYi9" target="_blank" rel="noopener noreferrer" class="font-mono text-light-700 dark:text-dark-200 hover:text-light-1000 dark:hover:text-dark-0 hover:underline transition-colors">North End FRC Practice Field (hosted by teams 1778 and 2522)</a>
                             <br />
@@ -100,34 +91,28 @@ import Layout from '../layouts/Layout.astro';
                             <span class="font-mono text-light-600 dark:text-dark-100 text-sm">100 140th Ave SE<br />Bellevue, WA 98005</span><br />
                             <span class="text-sm text-light-500 dark:text-dark-300 font-mono">(Competition Event Location)</span>
                         </li>
-                    </ul>
-                </div>
+                </ul>
             </div>
-        </div>
+        </StandardBox>
 
-        <!-- Content box: styled for light/dark, contains all info -->
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-            <div
-                class="rounded-xl border-2 bg-light-0 dark:bg-dark-500 border-light-300 dark:border-dark-400 shadow-md dark:shadow-none 
-                text-light-1000 dark:text-dark-0 transition-colors duration-200"
-            >
-                <div class="p-6 sm:p-8 md:p-10">
-                    <!-- Resource type desc -->
-                    <h2 class="text-xl md:text-2xl font-medium font-mono mb-6 text-light-1000 dark:text-dark-0">
-                        Email Addresses:
-                    </h2>
+        <StandardBox>
+            <div class="px-6 sm:px-8 md:px-10">
+                <!-- Resource type desc -->
+                <h2 class="text-xl md:text-2xl font-medium font-mono mb-6 text-light-1000 dark:text-dark-0">
+                    Email Addresses:
+                </h2>
 
-                    <!-- Description -->
-                    <h2 class="text-md font-medium font-mono mb-6 text-light-1000/80 dark:text-dark-0/80">
-                        Our leadership and coach are always willing to answer any questions you have. These listed e-mails will connect you
-                        to the various directors and the coach our team has. Each director works on different parts of the club so to get a
-                        quicker and/or more accurate response, have an idea of which director will be appropriate for your question. If
-                        you're unsure e-mail either the Operations or Technical executives.
-                    </h2>
+                <!-- Description -->
+                <h2 class="text-md font-medium font-mono mb-6 text-light-1000/80 dark:text-dark-0/80">
+                    Our leadership and coach are always willing to answer any questions you have. These listed e-mails will connect you
+                    to the various directors and the coach our team has. Each director works on different parts of the club so to get a
+                    quicker and/or more accurate response, have an idea of which director will be appropriate for your question. If
+                    you're unsure e-mail either the Operations or Technical executives.
+                </h2>
 
-                    <!-- Resource Links, structured differently -->
-                    <div class="px-5 flex flex-col space-y-6">
-                        <div>
+                <!-- Resource Links, structured differently -->
+                <div class="px-5 flex flex-col space-y-6">
+                    <div>
                             <!-- Coaches -->
                             <h3 class="text-lg font-medium font-mono text-light-1000 dark:text-dark-0 mb-3">Coaches:</h3>
                             <ul class="px-5 space-y-2 font-mono text-light-700 dark:text-dark-200">
@@ -154,34 +139,27 @@ import Layout from '../layouts/Layout.astro';
                                 <li>Strategy Director: <a href="mailto:strategy@ironriders.org" class="text-light-700 dark:text-dark-200 hover:text-light-1000 dark:hover:text-dark-0 hover:underline transition-colors">strategy@ironriders.org</a></li>
                                 <li>Outreach Director: <a href="mailto:outreach@ironriders.org" class="text-light-700 dark:text-dark-200 hover:text-light-1000 dark:hover:text-dark-0 hover:underline transition-colors">outreach@ironriders.org</a></li>
                             </ul>
-                        </div>     
-                    </div>
+                    </div>     
                 </div>
             </div>
-        </div>
+        </StandardBox>
 
-        <!-- Content box: styled for light/dark, contains all info -->
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-            <div 
-                class="rounded-xl border-2 bg-light-0 dark:bg-dark-500 border-light-300 dark:border-dark-400 shadow-md dark:shadow-none 
-                text-light-1000 dark:text-dark-0 transition-colors duration-200"
-            >
+        <StandardBox>
+            <div class="px-6 sm:px-8 md:px-10">
+                <!-- Resource type desc -->
+                <h2 class="text-xl md:text-2xl font-medium font-mono mb-6 text-light-1000 dark:text-dark-0">
+                    Paperwork:
+                </h2>
 
-                <div class="p-6 sm:p-8 md:p-10">
-                    <!-- Resource type desc -->
-                    <h2 class="text-xl md:text-2xl font-medium font-mono mb-6 text-light-1000 dark:text-dark-0">
-                        Paperwork:
-                    </h2>
+                <!-- Description -->
+                <h2 class="text-md font-medium font-mono mb-6 text-light-1000/80 dark:text-dark-0/80">
+                    Throughout the year students will have to fill out certain forms in order to participate on the team. While these 
+                    will be sent to out as necessary to those on the email list, if you need to fill out a form and don't have it they 
+                    will be listed below.
+                </h2>
 
-                    <!-- Description -->
-                    <h2 class="text-md font-medium font-mono mb-6 text-light-1000/80 dark:text-dark-0/80">
-                        Throughout the year students will have to fill out certain forms in order to participate on the team. While these 
-                        will be sent to out as necessary to those on the email list, if you need to fill out a form and don't have it they 
-                        will be listed below.
-                    </h2>
-
-                    <!-- Resource Links -->
-                    <ul class="px-5 list-disc space-y-3">
+                <!-- Resource Links -->
+                <ul class="px-5 list-disc space-y-3">
                         <li>
                             <a href="https://ironriders.org/wp-content/uploads/2018/02/Iron-Riders-Emergency-Medical-Info-Sheet.doc" target="_blank" rel="noopener noreferrer" class="font-mono font-bold text-light-700 dark:text-dark-200 hover:text-light-1000 dark:hover:text-dark-0 hover:underline transition-colors">
                             Emergency Medical Information</a>
@@ -194,31 +172,24 @@ import Layout from '../layouts/Layout.astro';
                             <a href="https://ironriders.org/wp-content/uploads/2018/02/Copy-of-Student-Transportation-Agreement-FIRST.pdf" target="_blank" rel="noopener noreferrer" class="font-mono font-bold text-light-700 dark:text-dark-200 hover:text-light-1000 dark:hover:text-dark-0 hover:underline transition-colors">
                             Student Transportation Agreement</a>
                         </li>
-                    </ul>
-                </div>
+                </ul>
             </div>
-        </div>
+        </StandardBox>
 
-        <!-- Content box: styled for light/dark, contains all info -->
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-            <div 
-                class="rounded-xl border-2 bg-light-0 dark:bg-dark-500 border-light-300 dark:border-dark-400 shadow-md dark:shadow-none 
-                text-light-1000 dark:text-dark-0 transition-colors duration-200"
-            >
+        <StandardBox>
+            <div class="px-6 sm:px-8 md:px-10">
+                <!-- Resource type desc -->
+                <h2 class="text-xl md:text-2xl font-medium font-mono mb-6 text-light-1000 dark:text-dark-0">
+                    Team Links:
+                </h2>
 
-                <div class="p-6 sm:p-8 md:p-10">
-                    <!-- Resource type desc -->
-                    <h2 class="text-xl md:text-2xl font-medium font-mono mb-6 text-light-1000 dark:text-dark-0">
-                        Team Links:
-                    </h2>
+                <!-- Description -->
+                <h2 class="text-md font-medium font-mono mb-6 text-light-1000/80 dark:text-dark-0/80">
+                    For students apart of the team.
+                </h2>
 
-                    <!-- Description -->
-                    <h2 class="text-md font-medium font-mono mb-6 text-light-1000/80 dark:text-dark-0/80">
-                        For students apart of the team.
-                    </h2>
-
-                    <!-- Resource Links -->
-                    <ul class="px-5 list-disc space-y-3">
+                <!-- Resource Links -->
+                <ul class="px-5 list-disc space-y-3">
                         <li>
                             <a href="https://ironriders.org/purchase-request" target="_blank" rel="noopener noreferrer" class="font-mono text-light-700 dark:text-dark-200 hover:text-light-1000 dark:hover:text-dark-0 hover:underline transition-colors">
                             Purchase Request</a>
@@ -227,10 +198,8 @@ import Layout from '../layouts/Layout.astro';
                             <a href="https://inventory.ironriders.org/" target="_blank" rel="noopener noreferrer" class="font-mono text-light-700 dark:text-dark-200 hover:text-light-1000 dark:hover:text-dark-0 hover:underline transition-colors">
                             Shop Inventory</a>
                         </li>
-                    </ul>
-                </div>
+                </ul>
             </div>
-        </div>
-
+        </StandardBox>
     </div>
 </Layout>
