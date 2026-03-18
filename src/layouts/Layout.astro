@@ -6,6 +6,8 @@ import "../styles/global.css";
 import DropDownButton from '../components/DropDownButton.astro';
 import Button from '../components/Button.astro';
 import PhoneDropDownButton from "../components/PhoneDropDownButton.astro";
+
+//This is NOT USED; the phone menu doesn't have any regular buttons by design. Nevertheless, it still exists in the case we would need it
 import PhoneButton from "../components/PhoneButton.astro";
 
 ---
@@ -103,7 +105,7 @@ import PhoneButton from "../components/PhoneButton.astro";
             label="Community"
             id="Community"
               items={[
-              { href: "/chat", label: "Outreach" },
+              { href: "/outreach", label: "Outreach" },
               { href: "/discord", label: "Discord" },
               { href: "/donate", label: "Donate" },
             ]}

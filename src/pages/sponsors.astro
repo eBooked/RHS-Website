@@ -6,75 +6,103 @@ import Title from "../components/Title.astro";
 import { StaticPaths } from 'astro:static-paths';
 ---
 <Layout>
-  <!-- Wrapper -->
-  <div class="py-5">
-    <!-- Title -->
-    <Title
-        title='Sponsors'
-    />
+    <!-- Wrapper -->
+    <div class="py-5">
+        <!-- Title -->
+        <Title
+            title='Sponsors'
+        />
 
-	<!-- Desc -->
-	<div class="py-5 md:py-6 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-		<p class="text-light-800 dark:text-dark-100 text-lg max-w-4xl leading-relaxed">
-			A huge thanks to all of our incredible sponsors that allow us to compete each year!
-		</p>
-	</div>    
+        <!-- Desc -->
+        <div class="py-5 md:py-6 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-light-800 dark:text-dark-100 text-lg max-w-4xl leading-relaxed">
+                A huge thanks to all of our incredible sponsors that allow us to compete each year!
+            </p>
+        </div>
 
-    <StandardBox>
-        <!-- Just all the sponsor images and their respective links-->
-        <div class="p-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 items-center justify-items-center">
-           <figure class="flex items-center justify-center">
-                <a href="https://www.boeing.com" target="_blank" rel="noopener noreferrer">
-                    <img
-                        src="/assets/Sponsors/boeing.webp"
-                        alt="Boeing"
-                        class="h-28 md:h-32 w-auto object-contain"
-                        loading="lazy"
-                    />
-              </a>
-            </figure>
-            <figure class="flex items-center justify-center">
-                <a href="https://ghaasfoundation.org/" target="_blank" rel="noopener noreferrer">
-                    <img
-                        src="/assets/Sponsors/gene-hass-foundation.png"
-                        alt="Gene Haas Foundation"
-                        class="h-28 md:h-32 w-auto object-contain"
-                        loading="lazy"
-                    />
-                </a>
-            </figure>
-            <figure class="flex items-center justify-center">
-              <a href="https://ospi.k12.wa.us/" target="_blank" rel="noopener noreferrer">
-                <img
-                  src="/assets/Sponsors/ospi.webp"
-                  alt="OSPI"
-                  class="h-28 md:h-32 w-auto object-contain"
-                  loading="lazy"
-                />
-              </a>
-            </figure>
-            <figure class="flex items-center justify-center">
-              <a href="https://www.libertymutual.com" target="_blank" rel="noopener noreferrer">
-                <img
-                  src="/assets/Sponsors/liberty-mutual.webp"
-                  alt="Liberty Mutual"
-                  class="h-28 md:h-32 w-auto object-contain"
-                  loading="lazy"
-                />
-              </a>
-            </figure>
-            <figure class="flex items-center justify-center col-span-2 sm:col-span-1">
-              <a href="https://firstwa.org/" target="_blank" rel="noopener noreferrer">
-                <img
-                  src="/assets/Sponsors/first-washington.png"
-                  alt="FIRST Washington"
-                  class="h-28 md:h-32 w-auto object-contain"
-                  loading="lazy"
-                />
-              </a>
-            </figure>
-          </div>
+        <StandardBox>
+            <!-- Just all the sponsor images and their respective links-->
+
+            <h1 class="text-xl md:text-2xl font-medium font-mono mb-6 text-light-1000/80 dark:text-dark-0/80 px-8">
+                Main Sponsors:
+            </h1>
+
+            <div class="px-8 pb-5 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 items-center justify-items-center">
+                <figure class="flex items-center justify-center">
+                    <a href="https://www.boeing.com" target="_blank" rel="noopener noreferrer">
+                        <img
+                            src="/assets/Sponsors/boeing.webp"
+                            alt="Boeing"
+                            class="h-28 md:h-32 w-auto object-contain"
+                            loading="lazy"
+                        />
+                    </a>
+                </figure>
+                <figure class="flex items-center justify-center">
+                    <a href="https://ghaasfoundation.org/" target="_blank" rel="noopener noreferrer">
+                        <img
+                            src="/assets/Sponsors/gene-hass-foundation.png"
+                            alt="Gene Haas Foundation"
+                            class="h-28 md:h-32 w-auto object-contain"
+                            loading="lazy"
+                        />
+                    </a>
+                </figure>
+                <figure class="flex items-center justify-center">
+                    <a href="https://ospi.k12.wa.us/" target="_blank" rel="noopener noreferrer">
+                        <img
+                            src="/assets/Sponsors/ospi.webp"
+                            alt="OSPI"
+                            class="h-28 md:h-32 w-auto object-contain"
+                            loading="lazy"
+                        />
+                    </a>
+                </figure>
+                <figure class="flex items-center justify-center">
+                    <a href="https://www.libertymutual.com" target="_blank" rel="noopener noreferrer">
+                        <img
+                            src="/assets/Sponsors/liberty-mutual.webp"
+                            alt="Liberty Mutual"
+                            class="h-28 md:h-32 w-auto object-contain"
+                            loading="lazy"
+                        />
+                    </a>
+                </figure>
+                <figure class="flex items-center justify-center col-span-2 sm:col-span-1">
+                    <a href="https://firstwa.org/" target="_blank" rel="noopener noreferrer">
+                        <img
+                            src="/assets/Sponsors/first-washington.png"
+                            alt="FIRST Washington"
+                            class="h-28 md:h-32 w-auto object-contain"
+                            loading="lazy"
+                        />
+                    </a>
+                </figure>
+            </div>
         </StandardBox>
+        <StandardBox>
+            <div class="px-6 sm:px-8 md:px-10">
 
+                <h1 class="text-xl md:text-2xl font-medium font-mono mb-6 text-light-1000/80 dark:text-dark-0/80">
+                    Additional Sponsors:
+                </h1>
+
+                <ul class="px-5 list-disc list-inside space-y-3">
+                    <li class="font-mono">Seattle Public School CTE</li>
+                    <li class="font-mono">William Fill</li>
+                    <li class="font-mono">John Luetke & Danielle Boles</li>
+                    <li class="font-mono">John Yip</li>
+                    <li class="font-mono">Steven Bonsma</li>
+                    <li class="font-mono">Rich Unger</li>
+                    <li class="font-mono">Cynthia Ledford</li>
+                    <li class="font-mono">FIRST</li>
+                    <li class="font-mono">David Andresen</li>
+                    <li class="font-mono">Hiju Surh</li>
+                    <li class="font-mono">Kishore Kumar Dhonan Bhojan</li>
+                    <li class="font-mono">Carl Anderson</li>
+                    <li class="font-mono">Julie Clayton</li>
+                </ul>
+            </div>
+        </StandardBox>
     </div>
 </Layout>
