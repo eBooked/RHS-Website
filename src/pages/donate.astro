@@ -1,0 +1,121 @@
+---
+import Layout from '../layouts/Layout.astro';
+import StandardBox from '../layouts/StandardBox.astro';
+
+import Title from "../components/Title.astro";
+---
+
+<Layout>
+    <!-- Wrapper -->
+    <div class="py-5">
+
+        <!-- Title -->
+        <Title 
+            title="Donate" 
+        />
+
+        <!-- Description -->
+        <div class="py-5 md:py-6 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-light-800 dark:text-dark-100 text-lg max-w-4xl leading-relaxed">
+                Donations helps our team...
+            </p>
+        </div>
+
+        <!-- What Donations Do Box -->
+        <StandardBox>
+            <div class="px-6 sm:px-8 md:px-10 py-10">
+                <h2 class="text-2xl md:text-3xl font-semibold font-mono mb-3">
+                    What your donation supports
+                </h2>
+                <p class="font-mono text-base md:text-lg text-gray-700 dark:text-gray-300 max-w-4xl">
+                    Robotics is a hands-on program with real build costs. Your support directly supports our program.
+                </p>
+
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="p-6 bg-white dark:bg-gray-700 rounded-lg border border-light-300/60 dark:border-dark-400/60">
+                        <h3 class="text-dark-800 font-bold font-mono text-lg dark:text-gray-100">
+                            Parts and Materials
+                        </h3>
+                        <p class="mt-2 font-mono text-sm text-gray-700 dark:text-gray-300">
+                            
+                        </p>
+                    </div>
+                    <div class="p-6 bg-white dark:bg-gray-700 rounded-lg border border-light-300/60 dark:border-dark-400/60">
+                        <h3 class="text-dark-800 font-bold font-mono text-lg dark:text-gray-100">
+                            Tools and Production
+                        </h3>
+                        <p class="mt-2 font-mono text-sm text-gray-700 dark:text-gray-300">
+                            
+                        </p>
+                    </div>
+                    <div class="p-6 bg-white dark:bg-gray-700 rounded-lg border border-light-300/60 dark:border-dark-400/60">
+                        <h3 class="text-dark-800 font-bold font-mono text-lg dark:text-gray-100">
+                            Events and Outreach
+                        </h3>
+                        <p class="mt-2 font-mono text-sm text-gray-700 dark:text-gray-300">
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </StandardBox>
+
+        <StandardBox>
+            <div class="px-6 sm:px-8 md:px-10 py-10">
+                <h2 class="text-2xl md:text-3xl font-semibold font-mono mb-6">
+                    Ways to give
+                </h2>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <div class="lg:col-span-3">
+                        <p class="font-mono text-base md:text-lg text-gray-700 dark:text-gray-300 max-w-4xl">
+                            Unfortunately, due to School Club Policies, we are unable to directly accept cash in-person. Instead, we work
+                            with FIRST Washington to handle team donations. In addition, it is a registered 501c(3) organization -- all donations are 
+                            tax-deductible as allowed by law. Their Federal EIN is #45-2443839.
+                            How to donate:
+                        </p>
+
+                        <ul class="mt-5 list-disc list-inside space-y-2 font-mono text-sm text-gray-700 dark:text-gray-300">
+                            <li>Navigate to <a href="https://app.aplos.com/aws/give/WAFIRSTBoosters/TeamDonationForm", target="_blank">
+                                https://app.aplos.com/aws/give/WAFIRSTBoosters/TeamDonationForm
+                            </a></li>
+                            <li>Select "FRC 4180" from the "Purpose" dropdown.</li>
+                            <li>Enter your donation amount and frequency</li>
+                            <li>Halfway down the page, be sure to also enter "FRC 4180" in the "Team Number" field.</li>
+                        </ul>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </StandardBox>
+
+        <StandardBox>
+            <div class="px-6 sm:px-8 md:px-10 py-10">
+                <h2 class="text-2xl md:text-3xl font-semibold font-mono mb-3">
+                    Prefer to Support in Other Ways?
+                </h2>
+                <p class="font-mono text-base md:text-lg text-gray-700 dark:text-gray-300 max-w-4xl">
+                    Desc of other ways to help
+                </p>
+
+                <div class="mt-6 flex flex-col sm:flex-row gap-3">
+                    <a
+                        href="/outreach"
+                        class="inline-flex items-center justify-center px-5 py-2 rounded-md font-mono text-sm
+                        bg-golden-yellow text-black hover:opacity-90 transition"
+                    >
+                        Outreach
+                    </a>
+                    <a
+                        href="/team"
+                        class="inline-flex items-center justify-center px-5 py-2 rounded-md font-mono text-sm
+                        border border-light-400 dark:border-dark-300 text-gray-800 dark:text-gray-100 hover:bg-light-100/60 dark:hover:bg-dark-600 transition"
+                    >
+                        Meet the team
+                    </a>
+                </div>
+            </div>
+        </StandardBox>
+    </div>
+</Layout>
