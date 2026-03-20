@@ -2,5 +2,7 @@
     "scm.diffDecorations": "none",
     "scm.diffDecorationsGutterAction": "none",
     "scm.diffDecorationsGutterVisibility": "hover",
-    "editor.cursorStyle": "line"
+    "editor.cursorStyle": "line",
+    "editor.tabSize": 4,
+    "editor.detectIndentation": false
 }

@@ -6,41 +6,37 @@
 
 /* Custom colors */
 @theme {
-  /* RHS Green and yellow */
-  --color-dark-green: #033602;
-  --color-golden-yellow: #facc15;
+    /* RHS Green and yellow */
+    --color-dark-green: #033602;
+    --color-golden-yellow: #facc15;
 
-  /* Neutral grayscale scale for light mode (0 = lightest, 1000 = darkest) */
-  --color-light-0: #ffffff;      /* page background */
-  --color-light-100: #f9fafb;    /* very light surfaces (cards, subtle sections) */
-  --color-light-200: #f3f4f6;    /* nav / footer / raised surfaces */
-  --color-light-300: #e5e7eb;    /* borders & strong dividers */
-  --color-light-400: #d1d5db;    /* heavy borders / subtle outlines */
-  --color-light-500: #9ca3af;    /* disabled / subtle lines */
-  --color-light-600: #6b7280;    /* muted text */
-  --color-light-700: #4b5563;    /* secondary body text */
-  --color-light-800: #374151;    /* strong body text */
-  --color-light-900: #111827;    /* headings */
-  --color-light-1000: #020617;   /* highest contrast accents on light */
+    /* Neutral grayscale scale for light mode (0 = lightest, 1000 = darkest) */
+    --color-light-0: #ffffff;      /* page background */
+    --color-light-100: #f9fafb;    /* very light surfaces (cards, subtle sections) */
+    --color-light-200: #f3f4f6;    /* nav / footer / raised surfaces */
+    --color-light-300: #e5e7eb;    /* borders & strong dividers */
+    --color-light-400: #d1d5db;    /* heavy borders / subtle outlines */
+    --color-light-500: #9ca3af;    /* disabled / subtle lines */
+    --color-light-600: #6b7280;    /* muted text */
+    --color-light-700: #4b5563;    /* secondary body text */
+    --color-light-800: #374151;    /* strong body text */
+    --color-light-900: #111827;    /* headings */
+    --color-light-1000: #020617;   /* highest contrast accents on light */
 
-  /* Extra legacy light grays kept for future use (not currently referenced) */
-  --color-light-extra-700: #5b6474;
-  --color-light-extra-800: #4b5563;
-  --color-light-extra-900: #1f2937;
-  --color-light-extra-1000: #111827;
 
-  /* Neutral grayscale scale for dark mode (0 = lightest, 1000 = darkest) */
-  --color-dark-0: #e6e9ef;       /* primary text */
-  --color-dark-100: #9aa3b2;     /* muted text */
-  --color-dark-200: #c4c9d4;     /* slightly dimmed text */
-  --color-dark-300: #b0b7c5;     /* mid text tone */
-  --color-dark-400: #262c38;     /* hover / raised sections */
-  --color-dark-500: #202632;     /* between hover and surfaces */
-  --color-dark-600: #1a1f28;     /* cards / nav / general surfaces */
-  --color-dark-700: #171b23;     /* deeper surfaces transition */
-  --color-dark-800: #151821;     /* deeper surfaces */
-  --color-dark-900: #11131a;     /* near-background */
-  --color-dark-1000: #0f1115;    /* main page background */
+
+    /* Neutral grayscale scale for dark mode (0 = lightest, 1000 = darkest) */
+    --color-dark-0: #e6e9ef;       /* primary text */
+    --color-dark-100: #9aa3b2;     /* muted text */
+    --color-dark-200: #c4c9d4;     /* slightly dimmed text */
+    --color-dark-300: #b0b7c5;     /* mid text tone */
+    --color-dark-400: #262c38;     /* hover / raised sections */
+    --color-dark-500: #202632;     /* between hover and surfaces */
+    --color-dark-600: #1a1f28;     /* cards / nav / general surfaces */
+    --color-dark-700: #171b23;     /* deeper surfaces transition */
+    --color-dark-800: #151821;     /* deeper surfaces */
+    --color-dark-900: #11131a;     /* near-background */
+    --color-dark-1000: #0f1115;    /* main page background */
 }
 
 /* UNIVERSAL VARIABLES */
@@ -57,6 +53,6 @@
 
 /* main html */
 html, body {
-  height: 100%;
-  margin: 0;
+    height: 100%;
+    margin: 0;
 }
