@@ -1,0 +1,75 @@
+@layer base, view-transitions, print;
+@import './print-header.css' layer(print);
+@import './theme-mobile-toggle.css' layer(mobile-nav);
+
+button:has(+ ul a[aria-current='page']),
+details:has([aria-current='page']) > summary,
+[aria-current='page'] {
+    text-decoration: var(--color-golden-yellow) underline solid 0.4ex;
+}
+@layer base {
+    @scope (body) to (#main-content) {
+        @media (prefers-reduced-motion: no-preference) and (screen) and (width <= 42rem) {
+            :scope > header {
+                transform: translateX(0);
+                transition: transform 300ms;
+            }
+            @container body scroll-state(scrolled: block-end) {
+                :scope > header {
+                    transform: translateX(-100%);
+                }
+            }
+        }
+        [popover] {
+            border: initial;
+        }
+        ul,
+        menu,
+        ol {
+            padding: 0;
+            list-style: none;
+        }
+        a {
+            color: inherit;
+        }
+    }
+}
+body > main {
+    margin-block-start: calc((var(--padding-sm) * 2) + 2rlh);
+}
+main [id] {
+    scroll-margin-block-start: calc(
+        (var(--padding-sm) * 2)  + 2rlh
+    );
+}
+@layer header {
+    body > header {
+        anchor-name: --header;
+    }
+    body > header, body > header + nav {
+        z-index: 1;
+    }
+    body > header {
+        padding-inline: var(--padding-md);
+        padding-block: var(--padding-sm);
+        inline-size: 100%;
+        display: flex;
+        position: fixed;
+        justify-content: space-between;
+        box-sizing: border-box;
+        inset-block-start: 0;
+        inset-inline: 0;
+        align-items: center;
+        background: light-dark(
+            oklch(from white calc(l * 0.95) c h),
+            #151821
+        );
+    }
+}
+
+@layer view-transitions {
+    ::view-transition-new(root) {
+        clip-path: circle(0% at 0% 0%);
+        z-index: 999;
+    }
+}

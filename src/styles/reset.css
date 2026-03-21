@@ -1,0 +1,57 @@
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+    &:not(p) {
+        text-wrap: balance;
+    }
+}
+
+p {
+    text-wrap: pretty;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    overflow-inline: hidden;
+    background-color: light-dark(oklch(from white calc(l * 0.95) c h), var(--color-dark-800));
+    color: contrast-color(
+        light-dark(oklch(from white calc(l * 0.95) c h), var(--color-dark-800))
+    );
+}
+
+* {
+    margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    :root {
+        interpolate-size: allow-keywords;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+        will-change: unset !important;
+    }
+}
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-inline-size: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}

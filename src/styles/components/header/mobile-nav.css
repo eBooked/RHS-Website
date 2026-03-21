@@ -1,0 +1,125 @@
+    @scope (header + nav) {
+        :scope {
+            background-color: light-dark(
+                oklch(from white calc(l * 0.95) c h),
+                #151821
+            );
+            margin: 0;
+            position-anchor: --header;
+            flex-direction: column;
+            box-sizing: border-box;
+            position-area: block-end center;
+            inline-size: anchor-size(inline);
+            block-size: calc(100dvb - anchor-size(block));
+            transform: translateX(-100%);
+            opacity: 0.5;
+            transition:
+                transform 300ms,
+                opacity 300ms,
+                display 300ms allow-discrete,
+                overlay 300ms allow-discrete;
+        }
+        :scope:popover-open {
+            display: block flex;
+            transform: translateX(0);
+            opacity: 1;
+        }
+        @starting-style {
+            :scope:popover-open {
+                transform: translateX(100%);
+                opacity: 0.5;
+            }
+        }
+        :scope > ul:first-of-type {
+            flex-grow: 1;
+            overflow-block: auto;
+            scrollbar-gutter: stable both-edges;
+            padding: calc(2 * var(--padding-md));
+            background-color: light-dark(
+                oklch(from white calc(l * 0.95) c h),
+                #151821
+            );
+        }
+        :scope > ul:first-of-type > li:not(:last-child) {
+            border-block-end: 1px solid oklch(from currentColor l c h/0.25);
+        }
+        :scope > ul:first-of-type > li > a,
+        summary {
+            display: block flex;
+            margin-inline: var(--padding-md);
+            margin-block: var(--padding-sm);
+            cursor: pointer;
+        }
+        details > summary::after {
+            transform: rotate(0);
+            transition: transform 300ms;
+            border-inline: 5px solid transparent;
+            border-block-start: 5px solid currentColor;
+            inline-size: 0;
+            block-size: 0;
+            content: '';
+        }
+        details[open] > summary::after {
+            transform: rotate(180deg);
+        }
+        details::details-content {
+            block-size: 0;
+            transition:
+                block-size 300ms,
+                content-visibility 300ms allow-discrete;
+            overflow: hidden;
+            will-change: block-size;
+        }
+        details[open]::details-content {
+            block-size: auto;
+        }
+        details > summary {
+            justify-content: space-between;
+            align-items: center;
+        }
+        ul:not(:first-of-type) {
+            contain: paint layout;
+            outline-offset: calc(
+                -1 * var(--padding-md)
+            );
+            display: block flex;
+            position: sticky;
+            justify-content: space-evenly;
+            inset-block-end: 0;
+            background-color: light-dark(
+                oklch(from white calc(l * 0.95) c h),
+                #151821
+            );
+            border-block-start: 1px solid currentColor;
+        }
+        ul:not(:first-of-type) > li {
+            flex-grow: 1;
+        }
+        ul:not(:first-of-type) > li > a {
+            display: block flow;
+            padding: clamp(0.5rem, 0.321rem + 0.7955vw, 0.9375rem);
+            inline-size: stretch;
+            text-align: center;
+            border-inline-end: 1px solid currentColor;
+        }
+        ul:not(:first-of-type) > li:last-child > a {
+            border-inline-end: none;
+        }
+        summary + ul {
+            margin-inline: var(--padding-md);
+            margin-block-end: var(--padding-sm);
+            padding: var(--padding-md);
+        }
+        summary + ul > li > a::before {
+            display: inline flow-root;
+            transform: translateX(0);
+            transition: transform 300ms;
+            margin-inline-end: 1ch;
+            content: '>';
+        }
+        @media (prefers-reduced-motion: no-preference) {
+            summary + ul > li > a:is(:hover, :focus)::before {
+                transform: translateX(0.5ch);
+            }
+        }
+    }

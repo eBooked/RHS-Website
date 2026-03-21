@@ -1,0 +1,63 @@
+header > div:has(> #mobile-nav-toggle) {
+    display: block flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--padding-md);
+}
+#mobile-nav-toggle {
+    block-size: 1.15rlh;
+    inline-size: 1.15rlh;
+    cursor: pointer;
+    padding: var(--padding-sm);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+}
+#mobile-nav-toggle span {
+    position: relative;
+    display: block;
+    width: 0.85rlh;
+    height: 2px;
+    margin: 0 auto;
+    border: none;
+    cursor: pointer;
+    background: currentColor;
+    color: inherit;
+    font-size: 0;
+    transition: 300ms;
+}
+#mobile-nav-toggle span::before,
+#mobile-nav-toggle span::after {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: block;
+    width: 0.85rlh;
+    height: 2px;
+    background: currentColor;
+    content: '';
+    transition: transform 300ms;
+    transform-origin: center;
+    border-radius: 1px;
+}
+#mobile-nav-toggle span::before {
+    transform: translate(-50%, 300%);
+}
+#mobile-nav-toggle span::after {
+    transform: translate(-50%, -300%);
+}
+
+:root:has(#mobile-site-nav:popover-open) #mobile-nav-toggle {
+    > span::before {
+        transform: translate(-50%, 0) rotate(45deg);
+    }
+    > span::after {
+        transform: translate(-50%, 0) rotate(-45deg);
+    }
+    > span {
+        background-color: transparent;
+    }
+}

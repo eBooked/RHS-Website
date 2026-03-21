@@ -1,0 +1,55 @@
+---
+import type { NavItem } from './Data.ts';
+import { navigationData, mobileCTA } from './Data.ts';
+import NavLink from './NavLink.astro';
+import '../../styles/components/header/mobile-nav.css';
+---
+<nav
+    id="mobile-site-nav"
+    popover="manual"
+    aria-label="Main Site Navigation for Mobile"
+>
+    <ul>
+        {
+            navigationData.map((item) => {
+                if ('children' in item) {
+                    return (
+                        <li>
+                        <details>
+                            <summary>{item.label}</summary>
+                            <ul>
+                                {item.children.map((child: NavItem) => (
+                                    <NavLink
+                                        href={child.href}
+                                        label={child.label}
+                                        level={2}
+                                    />
+                                ))}
+                            </ul>
+                        </details>
+                        </li>
+                    );
+                } else {
+                    return (
+                        <NavLink
+                            href={item.href}
+                            label={item.label}
+                            level={1}
+                        />
+                    );
+                }
+            })
+        }
+    </ul>
+    <ul>
+        {
+            mobileCTA.map((item) => (
+                <NavLink
+                    href={item.href}
+                    label={item.label}
+                    level={null}
+                />
+            ))
+        }
+    </ul>
+</nav>

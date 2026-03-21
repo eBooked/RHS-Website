@@ -1,0 +1,76 @@
+label.theme-toggle {
+    cursor: pointer;
+    block-size: 1rlh;
+    inline-size: 1rlh;
+}
+label.theme-toggle::after {
+    content: var(--icon) / var(--contents);
+    filter: var(--filter, none);
+    block-size: 100%;
+    inline-size: 100%;
+    display: inline flow-root;
+}
+label.theme-toggle:has(input:focus-visible)::after {
+    outline: 2px solid;
+    outline-color: black;
+    outline-offset: 5px;
+    border-radius: 100%;
+}
+label.theme-toggle > input {
+    clip-path: circle(0);
+    white-space: nowrap;
+    position: absolute;
+    overflow: hidden;
+}
+@layer color-scheme {
+    :root {
+        color-scheme: light dark;
+    }
+    @media not (scripting: enabled) {
+        :root:has(option[value~='Light']:checked) {
+            color-scheme: light;
+            @apply light;
+        }
+        :root:has(option[value~='Dark']:checked) {
+            color-scheme: dark;
+            @apply dark;
+        }
+    }
+    @media (scripting: enabled) {
+        :root:has(.theme-toggle > input:checked) {
+            color-scheme: dark;
+            @apply dark;
+            --icon: var(--svg-dark);
+            --contents: 'Dark';
+            --filter: invert(1);
+        }
+        :root:has(.theme-toggle > input:not(:checked)) {
+            color-scheme: light;
+            @apply light;
+            --icon: var(--svg-light);
+            --contents: 'Light';
+        }
+    }
+    body {
+        background: Canvas;
+        color: CanvasText;
+    }
+}
+:scope {
+    --svg-light: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor" fill="none"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>');
+    --svg-dark: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="currentcolor" stroke="none"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>');
+}
+:root:active-view-transition-type(theme)::view-transition-group(root),
+:root:active-view-transition-type(theme)::view-transition-old(root),
+:root:active-view-transition-type(theme)::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+}
+.noscript-fallback {
+    display: none;
+}
+@media (scripting: none) {
+    .noscript-fallback {
+        display: contents;
+    }
+}
