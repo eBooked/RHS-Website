@@ -4,7 +4,7 @@ To start the dev env run
 ```sh
 npm install && npm run dev
 ```
-There is a compose build system so you can do 
+There is also a compose build system so you can do 
 ```sh
 docker compose build && docker compose up
 ```
