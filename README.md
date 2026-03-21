@@ -8,7 +8,7 @@ There is a compose build system so you can do
 ```sh
 docker compose build && docker compose up
 ```
-Either way it will become accessible via <a href="http://localhost:4321">http://localhost:4321</a>
+Either way it will become accessible via <a href="http://localhost:4321" target="_blank">http://localhost:4321</a>
 <h2>Astro information:</h2>
 ## 🚀 Project Structure
 
