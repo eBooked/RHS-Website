@@ -1,11 +1,15 @@
-# Astro Starter Kit: Minimal
+<h2>Quickstart</h2>
 
+To start the dev env run 
 ```sh
-npm create astro@latest -- --template minimal
+npm install && npm run dev
 ```
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
+There is a compose build system so you can do 
+```sh
+docker compose build && docker compose up
+```
+Either way it will become accessible via <a href="http://localhost:4321">http://localhost:4321</a>
+<h2>Astro information:</h2>
 ## 🚀 Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:
@@ -21,7 +25,7 @@ Inside of your Astro project, you'll see the following folders and files:
 
 Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+There's nothing special about `src/components/`, but that's, where we like to put any Astro/React/Vue/Svelte/Preact components.
 
 Any static assets, like images, can be placed in the `public/` directory.
 
