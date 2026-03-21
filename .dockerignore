@@ -1,0 +1,10 @@
+Dockerfile
+.dockerignore
+.gitignore
+README.md
+DeveloperGuide.txt
+.vscode
+compose.yaml
+.astro
+dist
+node_modules
