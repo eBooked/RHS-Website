@@ -10,24 +10,124 @@ import StandardBox from '../layouts/StandardBox.astro';
     <div class="py-5">
         <!-- Title -->
          <Title
-            title="Tean Gallery"
+            title="Team Gallery"
          />
 
         <StandardBox>
-            <ImageDisplay
-                label="Girl's Gen 2025"
-                description={`
-                    TODO convert to immich links
-                `}
-                images={[
-                    { href: "/assets/2025-2026/GirlsGenPhotos/img1.JPG", label: "Image 1" },
-                    { href: "/assets/2025-2026/GirlsGenPhotos/img2.JPG", label: "Image 2" },
-                    { href: "/assets/2025-2026/GirlsGenPhotos/img3.JPG", label: "Image 3" },
-                    { href: "/assets/2025-2026/GirlsGenPhotos/img4.JPG", label: "Image 4" },
-                    { href: "/assets/2025-2026/GirlsGenPhotos/img7.JPG", label: "Image 7" },
-                    { href: "/assets/2025-2026/GirlsGenPhotos/img9.JPG", label: "Image 9" },
-                ]}
-            />
+            <style>
+                a{
+                    max-width:75%;
+                    display: inline-block 
+                }
+                img{
+                    
+                    margin-left: auto;
+                    margin-right: auto;
+                    max-height: 250px;
+                }
+                .box{
+                    width: 49%;
+                    display: inline-block;
+                    text-align: center;
+                }
+            </style>
+            <div>
+
+            <div class="box">
+            <h2>Rebuilt (2025 - 2026)</h2>
+            <a href="https://immich.lynnwood.johnluetke.com/s/rebuilt", target="_blank"><img  src="/assets/robots/2026-kepler.png"></a>
+            </div>
+
+            <div class="box">
+            <h2>Reefscape (2024 - 2025)</h2>
+            <a href="https://immich.lynnwood.johnluetke.com/s/reefscape", target="_blank"><img  src="/assets/robots/2025-neptune.jpeg"></a>
+            </div>
+
+            </div>
+
+            <div>
+
+            <div class="box">
+            <h2>Crescendo (2023 - 2024)</h2>
+            <a href="https://immich.lynnwood.johnluetke.com/s/crescendo", target="_blank"><img  src="/assets/robots/2024-saturn.jpeg"></a>
+            </div>
+
+            <div class="box">
+            <h2>Charged Up (2022 - 2023)</h2>
+            <a href="https://immich.lynnwood.johnluetke.com/s/charged-up", target="_blank"><img  src="/assets/robots/2023-cobol.jpeg"></a>
+            </div>
+
+            </div>
+            
+            <div>
+
+            <div class="box">
+            <h2>Rapid React (2021 - 2022)</h2>
+            <a href="https://immich.lynnwood.johnluetke.com/s/rapid-react", target="_blank"><img  src="/assets/robots/2022-rolo.jpeg"></a>
+            </div>
+
+            <div class="box">
+            <h2>Infinite Recharge (2019 - 2020)</h2>
+            <a href="https://immich.lynnwood.johnluetke.com/s/infinite-recharge", target="_blank"><img  src="/assets/robots/2020-stardust.png"></a>
+            </div>
+
+            </div>
+
+            <div>
+
+            <div class="box">
+            <h2>Deep Space (2018 - 2019)</h2>
+            <a href="https://immich.lynnwood.johnluetke.com/s/deep-space", target="_blank"><img  src="/assets/robots/2019-athena.jpeg"></a>
+            </div>
+
+            <div class="box">
+            <h2>Power Up (2017 - 2018)</h2>
+            <a href="https://immich.lynnwood.johnluetke.com/s/power-up", target="_blank"><img  src="/assets/robots/2018-glorified-table.jpeg"></a>
+            </div>
+
+            </div>
+
+            <div>
+
+            <div class="box">
+            <h2>Steamworks (2016 - 2017)</h2>
+            <a href="https://immich.lynnwood.johnluetke.com/s/steamworks", target="_blank"><img  src="/assets/robots/2017-rampe-grande.jpeg"></a>
+            </div>
+
+            <div class="box">
+            <h2>Stronghold (2015 - 2016)</h2>
+            <a href="https://immich.lynnwood.johnluetke.com/s/stronghold", target="_blank"><img  src="/assets/robots/2016-silver.jpeg"></a>
+            </div>
+
+            </div>
+
+            <div>
+
+            <div class="box">
+            <h2>Recycle Rush (2014 - 2015)</h2>
+            <a href="https://immich.lynnwood.johnluetke.com/s/recycle-rush", target="_blank"><img  src="/assets/robots/2015-recycle-rush.jpeg"></a>
+            </div>
+
+            <div class="box">
+            <h2>Aerial Assist (2013 - 2014)</h2>
+            <a href="https://immich.lynnwood.johnluetke.com/s/aerial-assist", target="_blank"><img  src="/assets/robots/2014-aerial-assist.jpeg"></a>
+            </div>
+
+            </div>
+
+            <div>
+
+            <div class="box">
+            <h2>Ultimate Ascent (2012 - 2013)</h2>
+            <a href="https://immich.lynnwood.johnluetke.com/s/ultimate-ascent", target="_blank"><img  src="/assets/robots/2013-ultimate-ascent.jpg"></a>
+            </div>
+
+            <div class="box">
+            <h2>Rebund Rumble (2011 - 2012)</h2>
+            <a href="https://immich.lynnwood.johnluetke.com/s/rebound-rumble", target="_blank"><img  src="/assets/robots/2012-rebound-rumble.jpg"></a>
+            </div>
+
+            </div>
         </StandardBox>
 
     </div>
