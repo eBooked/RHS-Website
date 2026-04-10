@@ -1,0 +1,11 @@
+---
+const path = Astro.url;
+const { href, label, level } = Astro.props;
+---
+<li>
+    <a
+        href={href}
+        id={label == null ? undefined : `${label.toLowerCase().replace(/\s+/g, '-')}-nav-link-lvl-${level}`}
+        aria-current={path.pathname === href ? "page" : undefined}
+        >{label}</a>
+</li>

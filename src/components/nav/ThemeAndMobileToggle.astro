@@ -1,0 +1,30 @@
+---
+import '../../styles/components/theme-mobile-toggle.css'
+---
+
+<div>
+    <label
+        aria-label="Theme toggle (light or dark)"
+        class="theme-toggle"
+    >
+        <input type="checkbox" />
+    </label>
+    <div class="noscript-fallback">
+        <select aria-label="Choose a color theme: ">
+            <option
+                value="System theme"
+                selected
+                >System</option
+            >
+            <option value="Light mode">Light</option>
+            <option value="Dark mode">Dark</option>
+        </select>
+    </div>
+
+    <button
+        id="mobile-nav-toggle"
+        popovertarget="mobile-site-nav"
+    >
+        <span>Toggles the mobile site navigation</span>
+    </button>
+</div>

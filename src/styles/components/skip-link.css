@@ -1,0 +1,19 @@
+a[href='#main-content'] {
+    position: fixed;
+    inset-block-start: clamp(0.5rem, 0.321rem + 0.7955vw, 0.9375rem);
+    inset-inline-start: clamp(0.5rem, 0.321rem + 0.7955vw, 0.9375rem);
+}
+a[href='#main-content']:not(:focus-visible) {
+    max-inline-size: 0;
+    max-block-size: 0;
+    overflow: hidden;
+    font-size: 0;
+    white-space: nowrap;
+}
+a[href='#main-content']:focus-visible {
+    z-index: 10;
+    inset-block-start: clamp(0.5rem, 0.321rem + 0.7955vw, 0.9375rem);
+    inset-inline-start: clamp(0.5rem, 0.321rem + 0.7955vw, 0.9375rem);
+    background-color: white;
+    color: black;
+}

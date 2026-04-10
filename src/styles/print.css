@@ -1,0 +1,49 @@
+@media print {
+    menu[popover],
+    #site-nav {
+        display: none;
+    }
+    body {
+        background: white;
+        color: black;
+    }
+    a {
+        text-decoration: underline;
+    }
+    a[href]::after {
+        content: ' (' attr(href) ')';
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        page-break-after: avoid;
+        page-break-inside: avoid;
+    }
+    p,
+    ul,
+    ol {
+        page-break-inside: avoid;
+    }
+    @page {
+        margin: 2cm;
+    }
+    nav,
+    [popovertarget] {
+        display: none;
+    }
+    header {
+        position: static;
+    }
+    main#main-content {
+        margin-block-start: 0;
+    }
+    #mobile-site-nav {
+        display: none !important;
+    }
+    :is(a, summary):is(hover, focus) {
+        anchor-name: --hovered-item;
+    }
+}

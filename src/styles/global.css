@@ -1,8 +1,28 @@
-/* Imports Tailwind */
-@import "tailwindcss";
+@layer base, reset, components, print;
+@import url('./components/skip-link.css') layer(components);
+@import url('./components/theme-changer.css') layer(components);
+@import url('./print.css') layer(print);
+@import url('./reset.css') layer(reset);
+@import 'tailwindcss';
 
 /* Tailwind v4: Use class-based darkmode. Allows 'dark:' - makes it SO much easier thank god */
-@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant dark {
+    @media not (scripting: enabled) {
+        :root:has(option[value~='Dark']:checked) & {
+            @slot;
+        }
+        :root:has(option[value~='System']:checked) & {
+            @media not (prefers-color-scheme: light) {
+                @slot;
+            }
+        }
+    }
+    @media (scripting: enabled) {
+        :root:has(.theme-toggle input:checked) & {
+            @slot;
+        }
+    }
+}
 
 /* Custom colors */
 @theme {
@@ -11,48 +31,65 @@
     --color-golden-yellow: #facc15;
 
     /* Neutral grayscale scale for light mode (0 = lightest, 1000 = darkest) */
-    --color-light-0: #ffffff;      /* page background */
-    --color-light-100: #f9fafb;    /* very light surfaces (cards, subtle sections) */
-    --color-light-200: #f3f4f6;    /* nav / footer / raised surfaces */
-    --color-light-300: #e5e7eb;    /* borders & strong dividers */
-    --color-light-400: #d1d5db;    /* heavy borders / subtle outlines */
-    --color-light-500: #9ca3af;    /* disabled / subtle lines */
-    --color-light-600: #6b7280;    /* muted text */
-    --color-light-700: #4b5563;    /* secondary body text */
-    --color-light-800: #374151;    /* strong body text */
-    --color-light-900: #111827;    /* headings */
-    --color-light-1000: #020617;   /* highest contrast accents on light */
-
-
+    --color-light-0: #ffffff; /* page background */
+    --color-light-100: #f9fafb; /* very light surfaces (cards, subtle sections) */
+    --color-light-200: #f3f4f6; /* nav / footer / raised surfaces */
+    --color-light-300: #e5e7eb; /* borders & strong dividers */
+    --color-light-400: #d1d5db; /* heavy borders / subtle outlines */
+    --color-light-500: #9ca3af; /* disabled / subtle lines */
+    --color-light-600: #6b7280; /* muted text */
+    --color-light-700: #4b5563; /* secondary body text */
+    --color-light-800: #374151; /* strong body text */
+    --color-light-900: #111827; /* headings */
+    --color-light-1000: #020617; /* highest contrast accents on light */
 
     /* Neutral grayscale scale for dark mode (0 = lightest, 1000 = darkest) */
-    --color-dark-0: #e6e9ef;       /* primary text */
-    --color-dark-100: #9aa3b2;     /* muted text */
-    --color-dark-200: #c4c9d4;     /* slightly dimmed text */
-    --color-dark-300: #b0b7c5;     /* mid text tone */
-    --color-dark-400: #262c38;     /* hover / raised sections */
-    --color-dark-500: #202632;     /* between hover and surfaces */
-    --color-dark-600: #1a1f28;     /* cards / nav / general surfaces */
-    --color-dark-700: #171b23;     /* deeper surfaces transition */
-    --color-dark-800: #151821;     /* deeper surfaces */
-    --color-dark-900: #11131a;     /* near-background */
-    --color-dark-1000: #0f1115;    /* main page background */
+    --color-dark-0: #e6e9ef; /* primary text */
+    --color-dark-100: #9aa3b2; /* muted text */
+    --color-dark-200: #c4c9d4; /* slightly dimmed text */
+    --color-dark-300: #b0b7c5; /* mid text tone */
+    --color-dark-400: #262c38; /* hover / raised sections */
+    --color-dark-500: #202632; /* between hover and surfaces */
+    --color-dark-600: #1a1f28; /* cards / nav / general surfaces */
+    --color-dark-700: #171b23; /* deeper surfaces transition */
+    --color-dark-800: #151821; /* deeper surfaces */
+    --color-dark-900: #11131a; /* near-background */
+    --color-dark-1000: #0f1115; /* main page background */
 }
 
 /* UNIVERSAL VARIABLES */
 
 /* Keep in mind that 1rem = 4 tailwind units */
 :root {
-
-
-  /* Buttons */
-    --button-padding-x: .5rem;
+    --padding-lg: clamp(1rem, 3vmin, 1.5rem);
+    --padding-sm: clamp(0.25rem, 1.5vmin, 0.5rem);
+    --padding-xsm: clamp(0.25rch, 1vmin, 0.5rch);
+    --padding-md: clamp(0.5rem, 1.5vmin, 1rem);
+    /* Buttons */
+    --button-padding-x: 0.5rem;
     --button-padding-y: 1rem;
     --button-width: 9rem;
 }
-
-/* main html */
-html, body {
-    height: 100%;
-    margin: 0;
+@layer base {
+    a {
+        text-decoration-thickness: 0.2ex;
+        text-underline-offset: 0.2ex;
+        text-decoration-style: solid;
+        text-decoration-line: underline;
+        text-decoration-color: oklch(
+            from var(--color-dark-green) calc(l * 1.8) c h
+        );
+    }
+}
+@media (prefers-reduced-motion: no-preference) {
+    @layer base {
+        a {
+            transition: text-underline-offset 300ms;
+            text-underline-offset: 0.4ex;
+            will-change: text-underline-offset;
+            &:is(:hover, :focus) {
+                text-underline-offset: 0.2ex;
+            }
+        }
+    }
 }

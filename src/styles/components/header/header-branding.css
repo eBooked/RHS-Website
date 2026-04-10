@@ -1,0 +1,24 @@
+header > #header-branding-link {
+    margin-block: auto;
+}
+a:has(> #header-logo) {
+    display: flex;
+    align-items: center;
+    gap: var(--padding-md);
+}
+a:has(> #header-logo) #header-logo {
+    block-size: 2rlh;
+    inline-size: 2rlh;
+    filter: drop-shadow(0 0 5px oklch(from currentColor l c h/0.3));
+}
+a:has(> #header-logo) > span {
+    text-box-trim: trim-both;
+    background-color: var(--color-golden-yellow);
+    color: oklch(from var(--color-dark-green) calc(l * 0.5) c h);
+    text-decoration-color: black;
+    padding: var(--padding-sm);
+    font-family: monospace;
+    font-size: 125%;
+    box-sizing: border-box;
+    max-block-size: 2rlh;
+}

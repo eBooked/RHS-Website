@@ -1,0 +1,57 @@
+---
+import type { NavItem } from './Data.ts';
+import { navigationData } from './Data.ts';
+import NavLink from './NavLink.astro';
+
+import '../../styles/components/header/desktop-nav.css';
+---
+<nav
+    id="desktop-site-nav"
+    aria-label="Main Site Navigation for Desktop"
+>
+    <ul>
+        {
+            navigationData.map((item) => {
+                if ('children' in item) {
+                    return (
+                        <li>
+                            <button
+                                id={`${item.label.toLowerCase().replace(/\s+/g, '-')}-nav-button-lvl-1`}
+                                popovertarget={`${item.label.toLowerCase().replace(/\s+/g, '-')}-nav-menu`}
+                            >
+                                {item.label}
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 100 100"
+                                    aria-hidden="true"
+                                >
+                                    <polygon points="0,10 100,10 50,90" />
+                                </svg>
+                            </button>
+                            <ul
+                                id={`${item.label.toLowerCase().replace(/\s+/g, '-')}-nav-menu`}
+                                popover=""
+                            >
+                                {item.children.map((child: NavItem) => (
+                                    <NavLink
+                                        href={child.href}
+                                        label={child.label}
+                                        level={2}
+                                    />
+                                ))}
+                            </ul>
+                        </li>
+                    );
+                } else {
+                    return (
+                        <NavLink
+                            href={item.href}
+                            label={item.label}
+                            level={1}
+                        />
+                    );
+                }
+            })
+        }
+    </ul>
+</nav>
